@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"user",
+				"username"
+			],
+			[
+				"hos",
+				"hostname"
+			],
+			[
 				"h",
 				"h4	Tag"
 			]
@@ -11,19 +19,35 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "pwjunkpartial.php",
+			"settings":
+			{
+				"buffer_size": 6743,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config.php",
+			"settings":
+			{
+				"buffer_size": 1026,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 285.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 575.0
 	},
 	"console":
 	{
-		"height": 0.0
+		"height": 310.0
 	},
 	"distraction_free":
 	{
@@ -36,6 +60,9 @@
 	},
 	"file_history":
 	[
+		"/var/www/btgctrls/config.php",
+		"/var/www/html/pwjunk4.php",
+		"/var/www/html/pwjunk3.php",
 		"/var/www/html/postgrestest2.php",
 		"/var/www/html/postgrestest.php",
 		"/var/www/html/postgrestest.php~",
@@ -67,6 +94,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"($db,",
+			"mysql_query(",
+			"$db_name",
+			"$result",
+			"automatic setup start is started...",
+			"$link",
+			"$db",
+			"$link",
 			"  \n",
 			"PGDATABASE",
 			"= ",
@@ -82,6 +117,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"(",
+			"pg_exec($db,",
+			"$db",
 			", ",
 			"\");",
 			"("
@@ -95,8 +133,63 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "pwjunkpartial.php",
+					"settings":
+					{
+						"buffer_size": 6743,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3144,
+								3144
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 408.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "config.php",
+					"settings":
+					{
+						"buffer_size": 1026,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								898,
+								898
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
