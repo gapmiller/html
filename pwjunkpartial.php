@@ -14,9 +14,6 @@ if(!$db) die('
 <br><span style="font-size: 12pt;">&gt;&gt;Please check the parameters and database server&lt;&lt;</span></p>
 ');
 
-if(!$db){
-    setup();
-}
 $a=0;
 
 if (isset( $_GET['type'])&& $_GET['type']=='login'){
@@ -27,15 +24,20 @@ if (isset( $_GET['type'])&& $_GET['type']=='login'){
         if ($password==NULL) {
             echo "The password was not supplied";
         }else{
-            $query = pg_exec($db,"SELECT username,password FROM users WHERE username = '$username'") or die(mysql_error());
-            $data = mysql_fetch_array($query);
-            if($data['password'] != $password) {
+            $query = pg_exec($db,"SELECT fldusername,fldpassword FROM tblUsers WHERE fldusername = '$username'") or die(pg_last_error());
+            print_r($query);
+            echo "<br/>";
+            print_r($data['fldpassword']);
+            echo "<br/>";
+            $data = pg_fetch_array($query);
+             if($data['fldpassword'] != $password) {
                 echo "The supplied login is incorrect";
             }else{
-                $query = pg_exec("SELECT username,password FROM users WHERE username = '$username'") or die(mysql_error());
-                $row = mysql_fetch_array($query);
+                $query = pg_exec("SELECT fldusername,fldpassword FROM tblUsers WHERE fldusername = '$username'") or die(pg_last_error());
+                $row = pg_fetch_array($query);
                 setcookie("user", "$username", time()+3600);
                 welcome("The login was successful.");
+            
             }
         }
     }else echo 'The username was not supplied';
@@ -54,16 +56,16 @@ if (isset( $_GET['type'])&& $_GET['type']=='login'){
                 echo "Passwords do not match";
             }else{
                 //Has the username or email been used?
-                $checkuser = pg_exec($db, "SELECT username FROM users WHERE username='$username'");
-                $username_exist = mysql_num_rows($checkuser);
-                $checkemail = pg_exec("SELECT email FROM users WHERE email='$email'");
-                $email_exist = mysql_num_rows($checkemail);
+                $checkuser = pg_exec($db, "SELECT fldusername FROM tblUsers WHERE fldusername='$username'");
+                $username_exist = pg_num_rows($checkuser);
+                $checkemail = pg_exec("SELECT fldEmail FROM tblUsers WHERE fldEmail='$email'");
+                $email_exist = pg_num_rows($checkemail);
                 if ($email_exist||$username_exist) {
                     echo "The username or email is already in use";
                 }else{
                     //Everything seems good, lets insert.
-                    $query = "INSERT INTO users (username, password, email) VALUES('$username','$password','$email')";
-                    pg_exec($query) or die(mysql_error());
+                    $query = "INSERT INTO tblUsers (fldusername, fldpassword, fldEmail) VALUES('$username','$password','$email')";
+                    pg_exec($query) or die(pg_last_error());
                     welcome( "The user $username has been successfully registered.");
                 }
             }
@@ -76,38 +78,14 @@ if (isset( $_GET['type'])&& $_GET['type']=='login'){
 
 if (isset($_COOKIE['user']) && $_COOKIE['user']!="") {
     $username= $_COOKIE['user'];
-    if ($a==0)welcome ("You have already logged in; Enjoy.");
+    if ($a==0) welcome("You have already logged in; Enjoy.");
 } 
 
-$row1 = pg_exec("SELECT * FROM users");// ORDER BY uid DESC LIMIT 1") or die(mysql_error());
-while($row=mysql_fetch_array($row1))
+$row1 = pg_exec("SELECT * FROM tblUsers");// ORDER BY uid DESC LIMIT 1") or die(pg_last_error());
+while($row=pg_fetch_array($row1))
 {
-    $lastuser= $row['username'];
+    $lastuser= $row['fldusername'];
 }
-
-function setup(){
-echo('
-<p style="color: #008000;   text-align: left;   font-size: 15pt;"">-Automatic setup is started...</p>
-');
-global $host,$username,$password,$db;
-//$db=mysql_connect($host, $username, $password);
-$sql= 'CREATE DATABASE users';
-if (!mysql_query ($sql, $db)) die('
-<p style="text-align: center;   font-size: 20pt;"><span style="color: #FF0000;">Failed to 
-create database! </span><br><span style="font-size: 12pt;">&gt;&gt;Please check the parameters and database server&lt;&lt;</span></p>
-');
-$sql = "CREATE TABLE `users`.`users` (
-`username` TEXT NOT NULL ,
-`password` TEXT NOT NULL ,
-`email` TEXT NOT NULL
-) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;";
-
-pg_exec($sql) or die('Setup Failed');
-echo('
-<p style="color: #008000;   text-align: left;   font-size: 15pt;"">-Automatic setup completed successfully. Your Login-Registration system is ready!</p>
-');
-}
-
 
 function welcome($msg){
 global $username;

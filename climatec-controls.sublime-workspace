@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"print",
+				"print_r"
+			],
+			[
 				"pri",
 				"print_r"
 			],
@@ -39,31 +43,15 @@
 			"file": "pwjunkpartial.php",
 			"settings":
 			{
+				"buffer_size": 6011,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "pwjunk4.php",
+			"settings":
+			{
 				"buffer_size": 6743,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config.php",
-			"settings":
-			{
-				"buffer_size": 1026,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sites.html",
-			"settings":
-			{
-				"buffer_size": 155,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.php",
-			"settings":
-			{
-				"buffer_size": 479,
 				"line_ending": "Unix"
 			}
 		},
@@ -108,20 +96,24 @@
 	},
 	"file_history":
 	[
+		"/var/www/html/jobsites.php",
+		"/home/gretchnm/climatecdb/esql_add1.txt",
+		"/home/gretchnm/climatecdb/controls_database_info.odt",
+		"/var/www/html/pwjunkpartial.php",
+		"/var/www/html/config.php",
+		"/var/www/html/sites.html",
+		"/var/www/html/index.php",
+		"/var/www/html/postgrestest2.php",
 		"/var/www/btgctrls/config.php",
 		"/var/www/html/pwjunk4.php",
 		"/var/www/html/pwjunk3.php",
-		"/var/www/html/postgrestest2.php",
 		"/var/www/html/postgrestest.php",
 		"/var/www/html/postgrestest.php~",
-		"/var/www/html/config.php",
-		"/var/www/html/index.php",
 		"/var/www/html/view/sites.html",
 		"/var/www/html/model/sites.php",
 		"/var/www/html/index.html",
 		"/var/www/html/jobsites.html",
 		"/var/www/html/info.php",
-		"/var/www/html/sites.html",
 		"/var/www/html/jobnums.html",
 		"/var/www/html/oldnames.html",
 		"/var/www/html/indexold.html"
@@ -142,6 +134,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fetch",
+			"fldPassword",
+			"fldUsername",
+			"tblu",
+			"my",
+			"mysql",
+			"mysql_query",
+			"setup",
+			"mysql_num_rows",
+			"mysql_fetch_array",
+			"mysql_error",
 			"myarray",
 			"view/",
 			"($db,",
@@ -167,6 +170,12 @@
 		"regex": false,
 		"replace_history":
 		[
+			"fldpassword",
+			"fldusername",
+			"pg_query",
+			"pg_num_rows",
+			"pg_fetch_array",
+			"pg_last_error",
 			"arraySites",
 			"",
 			"(",
@@ -185,7 +194,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -193,15 +202,15 @@
 					"file": "pwjunkpartial.php",
 					"settings":
 					{
-						"buffer_size": 6743,
+						"buffer_size": 6011,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3144,
-								3144
+								1172,
+								1172
 							]
 						],
 						"settings":
@@ -211,93 +220,41 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 408.0,
+						"translation.y": 227.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "config.php",
+					"file": "pwjunk4.php",
 					"settings":
 					{
-						"buffer_size": 1026,
+						"buffer_size": 6743,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								898,
-								898
+								1093,
+								1093
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 204.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "sites.html",
-					"settings":
-					{
-						"buffer_size": 155,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								155,
-								155
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "index.php",
-					"settings":
-					{
-						"buffer_size": 479,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								479,
-								479
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "postgrestest2.php",
 					"settings":
 					{
@@ -308,8 +265,8 @@
 						"selection":
 						[
 							[
-								5,
-								5
+								498,
+								498
 							]
 						],
 						"settings":
@@ -325,7 +282,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 3,
 					"file": "jobsites.php",
 					"settings":
 					{
@@ -336,16 +293,18 @@
 						"selection":
 						[
 							[
-								1118,
-								1118
+								503,
+								503
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 17.0,
+						"translation.y": 102.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -409,6 +368,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 156.0,
+	"side_bar_width": 219.0,
 	"status_bar_visible": true
 }
