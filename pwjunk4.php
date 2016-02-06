@@ -32,9 +32,9 @@ if (isset( $_GET['type'])&& $_GET['type']=='login'){
             if($data['password'] != $password) {
                 echo "The supplied login is incorrect";
             }else{
-                $query = pg_exec("SELECT username,password FROM users WHERE username = '$username'") or die(mysql_error());
-                $row = mysql_fetch_array($query);
-                setcookie("user", "$username", time()+3600);
+                //$query = pg_exec("SELECT username,password FROM users WHERE username = '$username'") or die(mysql_error());
+                //$row = mysql_fetch_array($query);
+                //setcookie("user", "$username", time()+3600);
                 welcome("The login was successful.");
             }
         }

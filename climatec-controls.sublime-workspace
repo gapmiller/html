@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"q",
+				"qryName"
+			],
+			[
+				"pg_f",
+				"pg_fetch_result"
+			],
+			[
+				"is_n",
+				"is_null"
+			],
+			[
+				"fldsit",
+				"fldsitename"
+			],
+			[
+				"fld",
+				"fldsiteaddress1"
+			],
+			[
+				"ar",
+				"arraySites"
+			],
+			[
 				"print",
 				"print_r"
 			],
@@ -40,18 +64,26 @@
 	"buffers":
 	[
 		{
-			"file": "pwjunkpartial.php",
+			"file": "jobsites.php",
 			"settings":
 			{
-				"buffer_size": 6011,
+				"buffer_size": 4088,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "pwjunk4.php",
+			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 6743,
+				"buffer_size": 483,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config.php",
+			"settings":
+			{
+				"buffer_size": 1026,
 				"line_ending": "Unix"
 			}
 		},
@@ -60,14 +92,6 @@
 			"settings":
 			{
 				"buffer_size": 670,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jobsites.php",
-			"settings":
-			{
-				"buffer_size": 1751,
 				"line_ending": "Unix"
 			}
 		}
@@ -96,16 +120,17 @@
 	},
 	"file_history":
 	[
+		"/var/www/html/pwjunkpartial.php",
+		"/var/www/html/pwjunk4.php",
+		"/var/www/html/postgrestest2.php",
+		"/var/www/html/pwjunk.php",
 		"/var/www/html/jobsites.php",
 		"/home/gretchnm/climatecdb/esql_add1.txt",
 		"/home/gretchnm/climatecdb/controls_database_info.odt",
-		"/var/www/html/pwjunkpartial.php",
 		"/var/www/html/config.php",
 		"/var/www/html/sites.html",
 		"/var/www/html/index.php",
-		"/var/www/html/postgrestest2.php",
 		"/var/www/btgctrls/config.php",
-		"/var/www/html/pwjunk4.php",
 		"/var/www/html/pwjunk3.php",
 		"/var/www/html/postgrestest.php",
 		"/var/www/html/postgrestest.php~",
@@ -199,74 +224,46 @@
 			[
 				{
 					"buffer": 0,
-					"file": "pwjunkpartial.php",
+					"file": "jobsites.php",
 					"settings":
 					{
-						"buffer_size": 6011,
+						"buffer_size": 4088,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1172,
-								1172
+								1433,
+								1433
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 227.0,
+						"translation.y": 663.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "pwjunk4.php",
+					"file": "index.php",
 					"settings":
 					{
-						"buffer_size": 6743,
+						"buffer_size": 483,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1093,
-								1093
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 204.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "postgrestest2.php",
-					"settings":
-					{
-						"buffer_size": 670,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								498,
-								498
+								483,
+								483
 							]
 						],
 						"settings":
@@ -282,19 +279,45 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "jobsites.php",
+					"buffer": 2,
+					"file": "config.php",
 					"settings":
 					{
-						"buffer_size": 1751,
+						"buffer_size": 1026,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								503,
-								503
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "postgrestest2.php",
+					"settings":
+					{
+						"buffer_size": 670,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -304,7 +327,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 102.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -318,7 +341,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 33.0
 	},
 	"layout":
 	{

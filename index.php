@@ -10,8 +10,8 @@
 
 
   <body>
-    <p><a href="jobsites.php">Job numbers listed by site</a></p>
-    <p><a href="sites.html">Sites</a></p>
+    <p><a href="jobsitenum.php">Job numbers listed by site</a></p>
+    <p><a href="jobsites.php">Sites</a></p>
     <p><a href="jobnums.html">Job numbers</a></p>
     <p><a href="oldnames.html">Sites listed by previous names</a></p>
 
