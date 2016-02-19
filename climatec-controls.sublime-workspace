@@ -94,6 +94,14 @@
 				"buffer_size": 670,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "pwjunk4.php",
+			"settings":
+			{
+				"buffer_size": 6749,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -219,7 +227,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -324,6 +332,34 @@
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "pwjunk4.php",
+					"settings":
+					{
+						"buffer_size": 6749,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
