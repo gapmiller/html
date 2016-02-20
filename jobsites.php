@@ -1,6 +1,16 @@
 
 <!DOCTYPE html>
 
+
+<?php
+// gotta have a session to see anything
+session_start();
+if ($_SESSION['loggedin'] != 1){
+  header("Location: index.php"); 
+  exit; 
+}
+?>
+
 <html>
   <head>
     <title>Climatec Controls-Job Numbers By Site</title>

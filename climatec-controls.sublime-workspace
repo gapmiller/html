@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"_",
+				"_SESSION"
+			],
+			[
+				"passw",
+				"password_hash"
+			],
+			[
 				"q",
 				"qryName"
 			],
@@ -67,15 +75,23 @@
 			"file": "jobsites.php",
 			"settings":
 			{
-				"buffer_size": 4088,
+				"buffer_size": 4234,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "index.php",
+			"file": "menu.php",
 			"settings":
 			{
-				"buffer_size": 483,
+				"buffer_size": 556,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "header.php",
+			"settings":
+			{
+				"buffer_size": 143,
 				"line_ending": "Unix"
 			}
 		},
@@ -91,15 +107,34 @@
 			"file": "postgrestest2.php",
 			"settings":
 			{
-				"buffer_size": 670,
+				"buffer_size": 766,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "<!-- This Script is from www.phpfreecpde.com, Coded by: Kerixa Inc\nhttp://www.phpfreecode.com/Login_-_Register_System.htm\n\nrevised for PostgreSQL by Gretchen Miller\n-->\n\n<?php\n \ninclude 'config.php';\n$db= postg_connect();\n//$db= pg_connect(\"host=\" . PGHOST . \" dbname=\" . PGDATABASE . \" user=\" . PGUSER . \" password=\" . PGPASSWORD);\nif(!$db) die('\n<p style=\"text-align: center;   font-size: 20pt;\"><span style=\"color: #FF0000;\">Failed to connect to the database! </span>\n<br><span style=\"font-size: 12pt;\">&gt;&gt;Please check the parameters and database server&lt;&lt;</span></p>\n');\n\nif(!$db){\n    setup();\n}\n$a=0;\n\nif (isset( $_GET['type'])&& $_GET['type']=='login'){\n    if ($_POST['username']) {\n        //did they supply a password and username\n        $username=$_POST['username'];\n        $password=$_POST['password'];\n        if ($password==NULL) {\n            echo \"The password was not supplied\";\n        }else{\n            $query = pg_exec($db,\"SELECT username,password FROM users WHERE username = '$username'\") or die(mysql_error());\n            $data = mysql_fetch_array($query);\n            if($data['password'] != $password) {\n                echo \"The supplied login is incorrect\";\n            }else{\n                //$query = pg_exec(\"SELECT username,password FROM users WHERE username = '$username'\") or die(mysql_error());\n                //$row = mysql_fetch_array($query);\n                //setcookie(\"user\", \"$username\", time()+3600);\n                welcome(\"The login was successful.\");\n            }\n        }\n    }else echo 'The username was not supplied';\n}elseif (isset( $_GET['type'])&& $_GET['type']=='register'){\n    if (isset($_POST[\"username0\"])) {\n        $username = $_POST[\"username0\"];\n        $password = $_POST[\"password0\"];\n        $cpassword = $_POST[\"cpassword\"];\n        $email = $_POST[\"email\"];\n        //Was a field left blank?\n        if($username==NULL||$password==NULL||$cpassword==NULL||$email==NULL) {\n            echo \"A field was left blank.\";\n        }else{\n            //Do the passwords match?\n            if($password!=$cpassword) {\n                echo \"Passwords do not match\";\n            }else{\n                //Has the username or email been used?\n                $checkuser = pg_exec($db, \"SELECT username FROM users WHERE username='$username'\");\n                $username_exist = mysql_num_rows($checkuser);\n                $checkemail = pg_exec(\"SELECT email FROM users WHERE email='$email'\");\n                $email_exist = mysql_num_rows($checkemail);\n                if ($email_exist||$username_exist) {\n                    echo \"The username or email is already in use\";\n                }else{\n                    //Everything seems good, lets insert.\n                    $query = \"INSERT INTO users (username, password, email) VALUES('$username','$password','$email')\";\n                    pg_exec($query) or die(mysql_error());\n                    welcome( \"The user $username has been successfully registered.\");\n                }\n            }\n        }\n    }   \n}elseif (isset( $_GET['type'])&& $_GET['type']=='logout'){\n    setcookie(\"user\", \"\", time()-3600);\n    $a=1;\n}\n\nif (isset($_COOKIE['user']) && $_COOKIE['user']!=\"\") {\n    $username= $_COOKIE['user'];\n    if ($a==0)welcome (\"You have already logged in; Enjoy.\");\n} \n\n$row1 = pg_exec(\"SELECT * FROM users\");// ORDER BY uid DESC LIMIT 1\") or die(mysql_error());\nwhile($row=mysql_fetch_array($row1))\n{\n    $lastuser= $row['username'];\n}\n\nfunction setup(){\necho('\n<p style=\"color: #008000;   text-align: left;   font-size: 15pt;\"\">-Automatic setup is started...</p>\n');\nglobal $host,$username,$password,$db;\n//$db=mysql_connect($host, $username, $password);\n$sql= 'CREATE DATABASE users';\nif (!mysql_query ($sql, $db)) die('\n<p style=\"text-align: center;   font-size: 20pt;\"><span style=\"color: #FF0000;\">Failed to \ncreate database! </span><br><span style=\"font-size: 12pt;\">&gt;&gt;Please check the parameters and database server&lt;&lt;</span></p>\n');\n$sql = \"CREATE TABLE `users`.`users` (\n`username` TEXT NOT NULL ,\n`password` TEXT NOT NULL ,\n`email` TEXT NOT NULL\n) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;\";\n\npg_exec($sql) or die('Setup Failed');\necho('\n<p style=\"color: #008000;   text-align: left;   font-size: 15pt;\"\">-Automatic setup completed successfully. Your Login-Registration system is ready!</p>\n');\n}\n\n\nfunction welcome($msg){\nglobal $username;\ndie('\n<table style=\"border-width: 0px;width: 400px; height: 107px\">\n    <tr>\n        <td style=\"border-style: solid;border-width: 0px;font-size: 17pt;background-color: #DFDFFF;\">'.$msg.'</td></tr><tr>\n        <td style=\"border-style: solid;border-width: 0px;font-size: 17pt;background-color: #DFDFFF;\"><strong>Welcome '.$username.'</strong><br>\n        <a href=\"'.$_SERVER['PHP_SELF'].'?type=logout\"><span style=\"border-style: solid;border-width: 0px;background-color: #DFDFFF;\">Logout</span></a></td>\n    </tr>\n</table>\n');\n}\n\n?>\n\n<html>\n<body>\n\n<table style=\"border-width: 0px;width: 400px; height: 107px\">\n    <tr>\n        <td style=\"border-style: solid;border-width: 0px;background-color: #DFDFFF;\"><form action=\"<?php echo $_SERVER['PHP_SELF'].'?type=login'?>\" method=\"post\" ><h1>Login</h1>\n<table style='border:0px solid #000000;'>\n<tr>\n<td align='right'>\nUsername: <input type='text' size='15' maxlength='25' name='username'>\n</td>\n</tr>\n<tr>\n<td align='right'>\nPassword: <input type='password' size='15' maxlength='25' name='password'>\n</td>\n</tr>\n<tr>\n<td align='center'>\n<input type=\"submit\" value=\"Login\">\n</td>\n</tr>\n</table>\n        </form><br></td>\n    </tr>\n    <tr>\n        <td style=\"border-style: solid;border-width: 0px;background-color: #DFFFFF;\"><form action=\"<?php echo $_SERVER['PHP_SELF'].'?type=register'?>\" method=\"post\" >\n<h1>Register</h1>\n<table style=\"border:0px solid #000000;\">\n<tr>\n<td align=\"right\">\nUsername: <input type=\"text\" size=\"15\" maxlength=\"25\" name=\"username0\">\n</td>\n</tr>\n<tr>\n<td align=\"right\">\nPassword: <input type=\"password\" size=\"15\" maxlength=\"25\" name=\"password0\">\n</td>\n</tr>\n<tr>\n<td align=\"right\">\nConfirm Password: <input type=\"password\" size=\"15\" maxlength=\"25\" name=\"cpassword\">\n</td>\n</tr>\n<tr>\n<td align=\"right\">\nEmail: <input type=\"text\" size=\"15\" maxlength=\"25\" name=\"email\">\n</td>\n</tr>\n<tr>\n<td align=\"center\">\n<input type=\"submit\" value=\"Register\">\n</td>\n</tr>\n</table>\n        </form><br></td>\n    </tr>\n    <tr>\n        <td style=\"border-style: solid;border-width: 0px;font-size: 17pt;background-color: #DFDFFF;\"><strong>Last member: <?php echo $lastuser?></strong></td>\n    </tr>\n</table>\n<br><font face=\"Tahoma\"><a target=\"_blank\" href=\"http://www.phpfreecode.com/\"><span style=\"font-size: 8pt; text-decoration: none\">PHP Free Code</span></a></font>\n</body></html>",
 			"file": "pwjunk4.php",
+			"file_size": 6749,
+			"file_write_time": 1450972348000000,
 			"settings":
 			{
 				"buffer_size": 6749,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sites.html",
+			"settings":
+			{
+				"buffer_size": 155,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 6592,
 				"line_ending": "Unix"
 			}
 		}
@@ -167,6 +202,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$a",
+			"0",
+			"logout",
+			"Welcome",
+			"welcome",
 			"fetch",
 			"fldPassword",
 			"fldUsername",
@@ -227,7 +267,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -235,15 +275,15 @@
 					"file": "jobsites.php",
 					"settings":
 					{
-						"buffer_size": 4088,
+						"buffer_size": 4234,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1433,
-								1433
+								112,
+								112
 							]
 						],
 						"settings":
@@ -253,25 +293,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 663.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "index.php",
+					"file": "menu.php",
 					"settings":
 					{
-						"buffer_size": 483,
+						"buffer_size": 556,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								483,
-								483
+								77,
+								77
 							]
 						],
 						"settings":
@@ -288,18 +328,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "config.php",
+					"file": "header.php",
 					"settings":
 					{
-						"buffer_size": 1026,
+						"buffer_size": 143,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								46,
+								140
 							]
 						],
 						"settings":
@@ -314,18 +354,44 @@
 				},
 				{
 					"buffer": 3,
-					"file": "postgrestest2.php",
+					"file": "config.php",
 					"settings":
 					{
-						"buffer_size": 670,
+						"buffer_size": 1026,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								5,
+								5
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "postgrestest2.php",
+					"settings":
+					{
+						"buffer_size": 766,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								100,
+								100
 							]
 						],
 						"settings":
@@ -341,11 +407,65 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "pwjunk4.php",
 					"settings":
 					{
 						"buffer_size": 6749,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								610,
+								610
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 51.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "sites.html",
+					"settings":
+					{
+						"buffer_size": 155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "index.php",
+					"settings":
+					{
+						"buffer_size": 6592,
 						"regions":
 						{
 						},

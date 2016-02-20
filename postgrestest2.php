@@ -1,4 +1,10 @@
 <?php
+session_start();
+if ($_SESSION['loggedin'] != 1){
+  header("Location: index.php"); 
+  exit; 
+}
+
 include 'config.php';
 
 $db= pg_connect("host=" . PGHOST . " dbname=" . PGDATABASE . " user=" . PGUSER . " password=" . PGPASSWORD);// or die('Could not connect to database server.');

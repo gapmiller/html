@@ -5,14 +5,9 @@ revised for PostgreSQL by Gretchen Miller
 -->
 
 <?php
- 
-include 'config.php';
-$db= postg_connect();
-//$db= pg_connect("host=" . PGHOST . " dbname=" . PGDATABASE . " user=" . PGUSER . " password=" . PGPASSWORD);
-if(!$db) die('
-<p style="text-align: center;   font-size: 20pt;"><span style="color: #FF0000;">Failed to connect to the database! </span>
-<br><span style="font-size: 12pt;">&gt;&gt;Please check the parameters and database server&lt;&lt;</span></p>
-');
+    include 'config.php';
+
+    $db= pg_connect("host=" . PGHOST . " dbname=" . PGDATABASE . " user=" . PGUSER . " password=" . PGPASSWORD) or die('Could not connect to database server.');
 
 $a=0;
 
@@ -25,19 +20,14 @@ if (isset( $_GET['type'])&& $_GET['type']=='login'){
             echo "The password was not supplied";
         }else{
             $query = pg_exec($db,"SELECT fldusername,fldpassword FROM tblUsers WHERE fldusername = '$username'") or die(pg_last_error());
-            print_r($query);
-            echo "<br/>";
-            print_r($data['fldpassword']);
-            echo "<br/>";
             $data = pg_fetch_array($query);
-             if($data['fldpassword'] != $password) {
-                echo "The supplied login is incorrect";
-            }else{
+            if (password_verify ($password, $data['fldpassword'])) {
                 $query = pg_exec("SELECT fldusername,fldpassword FROM tblUsers WHERE fldusername = '$username'") or die(pg_last_error());
                 $row = pg_fetch_array($query);
                 setcookie("user", "$username", time()+3600);
                 welcome("The login was successful.");
-            
+            }else{
+                echo "The supplied login is incorrect";
             }
         }
     }else echo 'The username was not supplied';
@@ -64,9 +54,13 @@ if (isset( $_GET['type'])&& $_GET['type']=='login'){
                     echo "The username or email is already in use";
                 }else{
                     //Everything seems good, lets insert.
-                    $query = "INSERT INTO tblUsers (fldusername, fldpassword, fldEmail) VALUES('$username','$password','$email')";
+                    $hpassword = password_hash($password, PASSWORD_DEFAULT);
+                    $query = "INSERT INTO tblUsers (fldusername, fldpassword, fldEmail) VALUES('$username','$hpassword','$email')";
                     pg_exec($query) or die(pg_last_error());
                     welcome( "The user $username has been successfully registered.");
+                    usleep(10);
+                    echo "wake up!";
+                    die();
                 }
             }
         }
@@ -89,15 +83,14 @@ while($row=pg_fetch_array($row1))
 
 function welcome($msg){
 global $username;
-die('
-<table style="border-width: 0px;width: 400px; height: 107px">
+print_r(
+'<table style="border-width: 0px;width: 400px; height: 107px">
     <tr>
         <td style="border-style: solid;border-width: 0px;font-size: 17pt;background-color: #DFDFFF;">'.$msg.'</td></tr><tr>
         <td style="border-style: solid;border-width: 0px;font-size: 17pt;background-color: #DFDFFF;"><strong>Welcome '.$username.'</strong><br>
         <a href="'.$_SERVER['PHP_SELF'].'?type=logout"><span style="border-style: solid;border-width: 0px;background-color: #DFDFFF;">Logout</span></a></td>
     </tr>
-</table>
-');
+</table>');
 }
 
 ?>
