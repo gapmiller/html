@@ -17,8 +17,8 @@ if ($_SESSION['loggedin'] != 1){
   <body>
     <p><a href="jobsitenum.php">Job numbers listed by site</a></p>
     <p><a href="jobsites.php">Sites</a></p>
-    <p><a href="jobnums.html">Job numbers</a></p>
-    <p><a href="oldnames.html">Sites listed by previous names</a></p>
+    <p><a href="jobnums.php">Job numbers</a></p>
+    <p><a href="oldnames.php">Sites listed by previous names</a></p>
   </body>
 
 </html>

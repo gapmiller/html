@@ -20,7 +20,8 @@ if ($_SESSION['loggedin'] != 1){
 <?php
 	include 'config.php';
 
-	$db= pg_connect("host=" . PGHOST . " dbname=" . PGDATABASE . " user=" . PGUSER . " password=" . PGPASSWORD) or die('Could not connect to database server.');
+	//$db= pg_connect("host=" . PGHOST . " dbname=" . PGDATABASE . " user=" . PGUSER . " password=" . PGPASSWORD) or die('Could not connect to database server.');
+  $db = postg_connect();
 
   // This is safe, since $_POST is converted automatically
   $recSites = pg_query($db, 'SELECT * FROM tblsites ORDER BY fldsitename ASC');
@@ -75,7 +76,7 @@ if ($_SESSION['loggedin'] != 1){
           }
           echo "<br/>";
         }
-        /**
+        /*
         This field isn't currently being used.
         if (!is_null($site["fldglobalcontroller"])){
           $qry = 'SELECT fldsitetype, fldbmsmanufacturer FROM tblsitetypes WHERE id = '. $site["fldsitetype"];
@@ -85,7 +86,7 @@ if ($_SESSION['loggedin'] != 1){
           print_r($site["fldglobalcontroller"]);
           echo "<br/>";
         }
-        **/
+        */
         if (!is_null($site["fldnotes"])){
           echo "Notes: ";
           print_r($site["fldnotes"]);

@@ -7,7 +7,8 @@ if ($_SESSION['loggedin'] != 1){
 
 include 'config.php';
 
-$db= pg_connect("host=" . PGHOST . " dbname=" . PGDATABASE . " user=" . PGUSER . " password=" . PGPASSWORD);// or die('Could not connect to database server.');
+//$db= pg_connect("host=" . PGHOST . " dbname=" . PGDATABASE . " user=" . PGUSER . " password=" . PGPASSWORD);// or die('Could not connect to database server.');
+$db = postg_connect();
   
 ?>
 
