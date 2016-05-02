@@ -4,6 +4,86 @@
 		"selected_items":
 		[
 			[
+				"h",
+				"h2	Tag"
+			],
+			[
+				"fo",
+				"font-family"
+			],
+			[
+				"logged",
+				"loggedin"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"ma",
+				"max-width"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"ba",
+				"background-size"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"ar",
+				"article	Tag"
+			],
+			[
+				"hea",
+				"header	Tag"
+			],
+			[
 				"_",
 				"_SESSION"
 			],
@@ -32,10 +112,6 @@
 				"fldsiteaddress1"
 			],
 			[
-				"ar",
-				"arraySites"
-			],
-			[
 				"print",
 				"print_r"
 			],
@@ -62,87 +138,52 @@
 			[
 				"hos",
 				"hostname"
-			],
-			[
-				"h",
-				"h4	Tag"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "jobsitenum.php",
+			"file": "form.html",
 			"settings":
 			{
-				"buffer_size": 984,
+				"buffer_size": 1859,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "jobsites.php",
+			"file": "style/styles.css",
 			"settings":
 			{
-				"buffer_size": 4259,
+				"buffer_size": 3708,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "config.php",
+			"file": "/home/gretchnm/gdi/html-int/workshop-files/structure.html",
 			"settings":
 			{
-				"buffer_size": 1026,
+				"buffer_size": 2413,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "menu.php",
+			"contents": ".form-4 {\n    /* Size and position */\n    width: 300px;\n    margin: 60px auto 30px;\n    padding: 10px;\n    position: relative;\n\n    /* Font styles */\n    font-family: 'Raleway', 'Lato', Arial, sans-serif;\n    color: white;\n    text-shadow: 0 2px 1px rgba(0,0,0,0.3);\n}\n\n.form-4 h1 {\n    font-size: 22px;\n    padding-bottom: 20px;\n}\n\n\n.form-4 input[type=text],\n.form-4 input[type=password] {\n    /* Size and position */\n    width: 100%;\n    padding: 8px 4px 8px 10px;\n    margin-bottom: 15px;\n\n    /* Styles */\n    border: 1px solid #4e3043; /* Fallback */\n    border: 1px solid rgba(78,48,67, 0.8);\n    background: rgba(0,0,0,0.15);\n    border-radius: 2px;\n    box-shadow: \n        0 1px 0 rgba(255,255,255,0.2), \n        inset 0 1px 1px rgba(0,0,0,0.1);\n    -webkit-transition: all 0.3s ease-out;\n    -moz-transition: all 0.3s ease-out;\n    -ms-transition: all 0.3s ease-out;\n    -o-transition: all 0.3s ease-out;\n    transition: all 0.3s ease-out;\n\n    /* Font styles */\n    font-family: 'Raleway', 'Lato', Arial, sans-serif;\n    color: #fff;\n    font-size: 13px;\n}",
 			"settings":
 			{
-				"buffer_size": 554,
-				"line_ending": "Unix"
+				"buffer_size": 1067,
+				"line_ending": "Unix",
+				"name": ".form-4 {"
 			}
 		},
 		{
-			"file": "header.php",
+			"contents": "/* styles */\n\nbody {\n	/**padding pushes content below navigation **/\n	padding-top: 70px;\n	font-family: 'Candal', sans-serif;\n}\n\nnav {\n	position: fixed;\n	top: 0;\n	left: 0;\n	background: #fafafa;\n	border-bottom: 2px solid #ccc;\n	height: 70px;\n	width: 100%;\n}\n\nnav ul {\n    float: right;\n    width: auto;\n}   \n\nnav li {\n	float: left;\n	width: auto;\n}\n\nnav li a {\n	padding: 25px 10px;\n	display: block;\n	text-decoration: none;\n	color: #666666;\n}\n\n#brand {\n    color: transparent;\n    background: url(../images/z.png) no-repeat top left;\n    background-size: contain;\n    height: 60px;\n    width: 60px;\n    float: left;\n    margin: 5px;\n} \n\n.container {\n	width: 1024px;\n	margin: 0 auto;\n	text-align: center;\n	font-size: 24px;\n}\n\n#hero {\n	background: url(../images/zebra-hero.jpg) no-repeat;\n	color: #fafafa;\n	text-align: center;\n	background-size: cover;\n	height: 350px;\n	padding: 25px 0;\n}\n\n#hero img {\n	width: 150px;\n	border-radius: 50%;\n}\n\n.column {\n	float: left;\n	width: 30%;\n	padding: 15px;\n	text-align: center;\n	font-size: 18px;\n}\n\n.column img {\n	width: 90%;\n	max-width: 90%;\n	border-radius: 50%;\n}\n\n#social {\n	background: #57BEC5;\n	color: #fafafa;\n	padding: 25px 0;\n	overflow: hidden;\n	width: 100%;\n}\n\n#social li{\n	float: left;\n	width: auto;\n	padding: 20px;\n	display: inline;\n	text-align: center;\n}\n\n#social ul {\n	display: inline-block;\n}\n\n.clear{clear: both;}",
+			"file": "/home/gretchnm/gdi/html-int/workshop-files/css/styles.css",
+			"file_size": 1319,
+			"file_write_time": 1462157114000000,
 			"settings":
 			{
-				"buffer_size": 143,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<!-- This Script is from www.phpfreecpde.com, Coded by: Kerixa Inc\nhttp://www.phpfreecode.com/Login_-_Register_System.htm\n\nrevised for PostgreSQL by Gretchen Miller\n-->\n\n<?php\n \ninclude 'config.php';\n$db= postg_connect();\n//$db= pg_connect(\"host=\" . PGHOST . \" dbname=\" . PGDATABASE . \" user=\" . PGUSER . \" password=\" . PGPASSWORD);\nif(!$db) die('\n<p style=\"text-align: center;   font-size: 20pt;\"><span style=\"color: #FF0000;\">Failed to connect to the database! </span>\n<br><span style=\"font-size: 12pt;\">&gt;&gt;Please check the parameters and database server&lt;&lt;</span></p>\n');\n\nif(!$db){\n    setup();\n}\n$a=0;\n\nif (isset( $_GET['type'])&& $_GET['type']=='login'){\n    if ($_POST['username']) {\n        //did they supply a password and username\n        $username=$_POST['username'];\n        $password=$_POST['password'];\n        if ($password==NULL) {\n            echo \"The password was not supplied\";\n        }else{\n            $query = pg_exec($db,\"SELECT username,password FROM users WHERE username = '$username'\") or die(mysql_error());\n            $data = mysql_fetch_array($query);\n            if($data['password'] != $password) {\n                echo \"The supplied login is incorrect\";\n            }else{\n                //$query = pg_exec(\"SELECT username,password FROM users WHERE username = '$username'\") or die(mysql_error());\n                //$row = mysql_fetch_array($query);\n                //setcookie(\"user\", \"$username\", time()+3600);\n                welcome(\"The login was successful.\");\n            }\n        }\n    }else echo 'The username was not supplied';\n}elseif (isset( $_GET['type'])&& $_GET['type']=='register'){\n    if (isset($_POST[\"username0\"])) {\n        $username = $_POST[\"username0\"];\n        $password = $_POST[\"password0\"];\n        $cpassword = $_POST[\"cpassword\"];\n        $email = $_POST[\"email\"];\n        //Was a field left blank?\n        if($username==NULL||$password==NULL||$cpassword==NULL||$email==NULL) {\n            echo \"A field was left blank.\";\n        }else{\n            //Do the passwords match?\n            if($password!=$cpassword) {\n                echo \"Passwords do not match\";\n            }else{\n                //Has the username or email been used?\n                $checkuser = pg_exec($db, \"SELECT username FROM users WHERE username='$username'\");\n                $username_exist = mysql_num_rows($checkuser);\n                $checkemail = pg_exec(\"SELECT email FROM users WHERE email='$email'\");\n                $email_exist = mysql_num_rows($checkemail);\n                if ($email_exist||$username_exist) {\n                    echo \"The username or email is already in use\";\n                }else{\n                    //Everything seems good, lets insert.\n                    $query = \"INSERT INTO users (username, password, email) VALUES('$username','$password','$email')\";\n                    pg_exec($query) or die(mysql_error());\n                    welcome( \"The user $username has been successfully registered.\");\n                }\n            }\n        }\n    }   \n}elseif (isset( $_GET['type'])&& $_GET['type']=='logout'){\n    setcookie(\"user\", \"\", time()-3600);\n    $a=1;\n}\n\nif (isset($_COOKIE['user']) && $_COOKIE['user']!=\"\") {\n    $username= $_COOKIE['user'];\n    if ($a==0)welcome (\"You have already logged in; Enjoy.\");\n} \n\n$row1 = pg_exec(\"SELECT * FROM users\");// ORDER BY uid DESC LIMIT 1\") or die(mysql_error());\nwhile($row=mysql_fetch_array($row1))\n{\n    $lastuser= $row['username'];\n}\n\nfunction setup(){\necho('\n<p style=\"color: #008000;   text-align: left;   font-size: 15pt;\"\">-Automatic setup is started...</p>\n');\nglobal $host,$username,$password,$db;\n//$db=mysql_connect($host, $username, $password);\n$sql= 'CREATE DATABASE users';\nif (!mysql_query ($sql, $db)) die('\n<p style=\"text-align: center;   font-size: 20pt;\"><span style=\"color: #FF0000;\">Failed to \ncreate database! </span><br><span style=\"font-size: 12pt;\">&gt;&gt;Please check the parameters and database server&lt;&lt;</span></p>\n');\n$sql = \"CREATE TABLE `users`.`users` (\n`username` TEXT NOT NULL ,\n`password` TEXT NOT NULL ,\n`email` TEXT NOT NULL\n) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;\";\n\npg_exec($sql) or die('Setup Failed');\necho('\n<p style=\"color: #008000;   text-align: left;   font-size: 15pt;\"\">-Automatic setup completed successfully. Your Login-Registration system is ready!</p>\n');\n}\n\n\nfunction welcome($msg){\nglobal $username;\ndie('\n<table style=\"border-width: 0px;width: 400px; height: 107px\">\n    <tr>\n        <td style=\"border-style: solid;border-width: 0px;font-size: 17pt;background-color: #DFDFFF;\">'.$msg.'</td></tr><tr>\n        <td style=\"border-style: solid;border-width: 0px;font-size: 17pt;background-color: #DFDFFF;\"><strong>Welcome '.$username.'</strong><br>\n        <a href=\"'.$_SERVER['PHP_SELF'].'?type=logout\"><span style=\"border-style: solid;border-width: 0px;background-color: #DFDFFF;\">Logout</span></a></td>\n    </tr>\n</table>\n');\n}\n\n?>\n\n<html>\n<body>\n\n<table style=\"border-width: 0px;width: 400px; height: 107px\">\n    <tr>\n        <td style=\"border-style: solid;border-width: 0px;background-color: #DFDFFF;\"><form action=\"<?php echo $_SERVER['PHP_SELF'].'?type=login'?>\" method=\"post\" ><h1>Login</h1>\n<table style='border:0px solid #000000;'>\n<tr>\n<td align='right'>\nUsername: <input type='text' size='15' maxlength='25' name='username'>\n</td>\n</tr>\n<tr>\n<td align='right'>\nPassword: <input type='password' size='15' maxlength='25' name='password'>\n</td>\n</tr>\n<tr>\n<td align='center'>\n<input type=\"submit\" value=\"Login\">\n</td>\n</tr>\n</table>\n        </form><br></td>\n    </tr>\n    <tr>\n        <td style=\"border-style: solid;border-width: 0px;background-color: #DFFFFF;\"><form action=\"<?php echo $_SERVER['PHP_SELF'].'?type=register'?>\" method=\"post\" >\n<h1>Register</h1>\n<table style=\"border:0px solid #000000;\">\n<tr>\n<td align=\"right\">\nUsername: <input type=\"text\" size=\"15\" maxlength=\"25\" name=\"username0\">\n</td>\n</tr>\n<tr>\n<td align=\"right\">\nPassword: <input type=\"password\" size=\"15\" maxlength=\"25\" name=\"password0\">\n</td>\n</tr>\n<tr>\n<td align=\"right\">\nConfirm Password: <input type=\"password\" size=\"15\" maxlength=\"25\" name=\"cpassword\">\n</td>\n</tr>\n<tr>\n<td align=\"right\">\nEmail: <input type=\"text\" size=\"15\" maxlength=\"25\" name=\"email\">\n</td>\n</tr>\n<tr>\n<td align=\"center\">\n<input type=\"submit\" value=\"Register\">\n</td>\n</tr>\n</table>\n        </form><br></td>\n    </tr>\n    <tr>\n        <td style=\"border-style: solid;border-width: 0px;font-size: 17pt;background-color: #DFDFFF;\"><strong>Last member: <?php echo $lastuser?></strong></td>\n    </tr>\n</table>\n<br><font face=\"Tahoma\"><a target=\"_blank\" href=\"http://www.phpfreecode.com/\"><span style=\"font-size: 8pt; text-decoration: none\">PHP Free Code</span></a></font>\n</body></html>",
-			"file": "pwjunk4.php",
-			"file_size": 6749,
-			"file_write_time": 1450972348000000,
-			"settings":
-			{
-				"buffer_size": 6749,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jobnums.php",
-			"settings":
-			{
-				"buffer_size": 1242,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jobnumrequest.php",
-			"settings":
-			{
-				"buffer_size": 286,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "postgrestest2.php",
-			"settings":
-			{
-				"buffer_size": 791,
+				"buffer_size": 1358,
 				"line_ending": "Unix"
 			}
 		}
@@ -150,15 +191,19 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 285.0,
 		"selected_items":
 		[
+			[
+				"Snippet: ",
+				"Snippet: <?php echo … ?>"
+			],
 			[
 				"",
 				"Toggle Block Comment"
 			]
 		],
-		"width": 440.0
+		"width": 575.0
 	},
 	"console":
 	{
@@ -175,17 +220,29 @@
 	},
 	"file_history":
 	[
-		"/var/www/html/LICENSE",
+		"/var/www/html/style/styles1.css",
 		"/var/www/html/index.php",
-		"/var/www/html/sites.html",
-		"/var/www/html/postgrestest2.php",
-		"/var/www/html/pwjunkpartial.php",
-		"/var/www/html/pwjunk4.php",
-		"/var/www/html/pwjunk.php",
+		"/var/www/html/jobnums.php",
+		"/var/www/html/menu.php",
+		"/var/www/html/controller/main_func.php",
+		"/var/www/html/form1.html",
+		"/var/www/html/junk.php",
+		"/home/gretchnm/gdi/html-int/workshop-files/css/global.css",
+		"/home/gretchnm/gdi/html-int/workshop-files/structure1.html",
+		"/home/gretchnm/gdi/html-int/workshop-files/junk.html",
+		"/var/www/html/jobsitenum.php",
 		"/var/www/html/jobsites.php",
+		"/var/www/html/config.php",
+		"/var/www/html/header.php",
+		"/var/www/html/pwjunk4.php",
+		"/var/www/html/jobnumrequest.php",
+		"/var/www/html/postgrestest2.php",
+		"/var/www/html/LICENSE",
+		"/var/www/html/sites.html",
+		"/var/www/html/pwjunkpartial.php",
+		"/var/www/html/pwjunk.php",
 		"/home/gretchnm/climatecdb/esql_add1.txt",
 		"/home/gretchnm/climatecdb/controls_database_info.odt",
-		"/var/www/html/config.php",
 		"/var/www/btgctrls/config.php",
 		"/var/www/html/pwjunk3.php",
 		"/var/www/html/postgrestest.php",
@@ -215,6 +272,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"50",
+			"center",
+			"%;\n",
+			"100",
+			"90",
+			"%;",
+			"banner1",
+			"logout",
+			";*/\n",
+			"menu",
+			"{\n",
 			"$site",
 			"$a",
 			"0",
@@ -252,7 +320,7 @@
 			"*/\n"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -282,29 +350,29 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "jobsitenum.php",
+					"file": "form.html",
 					"settings":
 					{
-						"buffer_size": 984,
+						"buffer_size": 1859,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								471,
-								471
+								1484,
+								1484
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -315,51 +383,58 @@
 				},
 				{
 					"buffer": 1,
-					"file": "jobsites.php",
+					"file": "style/styles.css",
 					"settings":
 					{
-						"buffer_size": 4259,
+						"buffer_size": 3708,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4259,
-								4259
+								1035,
+								1035
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 221.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
 				{
 					"buffer": 2,
-					"file": "config.php",
+					"file": "/home/gretchnm/gdi/html-int/workshop-files/structure.html",
 					"settings":
 					{
-						"buffer_size": 1026,
+						"buffer_size": 2413,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								808,
-								808
+								780,
+								780
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -369,24 +444,24 @@
 				},
 				{
 					"buffer": 3,
-					"file": "menu.php",
 					"settings":
 					{
-						"buffer_size": 554,
+						"buffer_size": 1067,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								296,
-								296
+								1067,
+								1067
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
+							"auto_name": ".form-4 {",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -397,136 +472,27 @@
 				},
 				{
 					"buffer": 4,
-					"file": "header.php",
+					"file": "/home/gretchnm/gdi/html-int/workshop-files/css/styles.css",
 					"settings":
 					{
-						"buffer_size": 143,
+						"buffer_size": 1358,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								143,
-								143
+								1296,
+								1296
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "pwjunk4.php",
-					"settings":
-					{
-						"buffer_size": 6749,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								610,
-								610
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 51.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "jobnums.php",
-					"settings":
-					{
-						"buffer_size": 1242,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								994,
-								994
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 306.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "jobnumrequest.php",
-					"settings":
-					{
-						"buffer_size": 286,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								144,
-								144
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "postgrestest2.php",
-					"settings":
-					{
-						"buffer_size": 791,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								127,
-								127
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 717.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -551,11 +517,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.59216575273,
 			1.0
 		],
 		"rows":
@@ -590,6 +563,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 318.0,
+	"side_bar_width": 172.0,
 	"status_bar_visible": true
 }
