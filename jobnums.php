@@ -20,9 +20,6 @@ if ($_SESSION['loggedin'] != 1){
 <?php
   include 'config.php';
 
-  //$db= pg_connect("host=" . PGHOST . " dbname=" . PGDATABASE . " user=" . PGUSER . " password=" . PGPASSWORD) or die('Could not connect to database server.');
-  $db = postg_connect();
-
   // This is safe, since $_POST is converted automatically
   //$recJobs = pg_query($db, 'SELECT * FROM tbljobnumbers  WHERE fldsiteid = 32 ORDER BY fldjobnumber ASC');
   $recJobs = pg_query($db, 'SELECT * FROM tbljobnumbers ORDER BY fldjobnumber ASC');

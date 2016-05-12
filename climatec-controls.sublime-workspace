@@ -4,8 +4,24 @@
 		"selected_items":
 		[
 			[
+				"a",
+				"a"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"fff",
+				"ffffff"
+			],
+			[
 				"h",
-				"h2	Tag"
+				"h1	Tag"
+			],
+			[
+				"_",
+				"_POST"
 			],
 			[
 				"fo",
@@ -64,10 +80,6 @@
 				"background-size"
 			],
 			[
-				"a",
-				"auto"
-			],
-			[
 				"padding",
 				"padding-top"
 			],
@@ -82,10 +94,6 @@
 			[
 				"hea",
 				"header	Tag"
-			],
-			[
-				"_",
-				"_SESSION"
 			],
 			[
 				"passw",
@@ -143,50 +151,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "form.html",
-			"settings":
-			{
-				"buffer_size": 1859,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "style/styles.css",
-			"settings":
-			{
-				"buffer_size": 3708,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/gretchnm/gdi/html-int/workshop-files/structure.html",
-			"settings":
-			{
-				"buffer_size": 2413,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": ".form-4 {\n    /* Size and position */\n    width: 300px;\n    margin: 60px auto 30px;\n    padding: 10px;\n    position: relative;\n\n    /* Font styles */\n    font-family: 'Raleway', 'Lato', Arial, sans-serif;\n    color: white;\n    text-shadow: 0 2px 1px rgba(0,0,0,0.3);\n}\n\n.form-4 h1 {\n    font-size: 22px;\n    padding-bottom: 20px;\n}\n\n\n.form-4 input[type=text],\n.form-4 input[type=password] {\n    /* Size and position */\n    width: 100%;\n    padding: 8px 4px 8px 10px;\n    margin-bottom: 15px;\n\n    /* Styles */\n    border: 1px solid #4e3043; /* Fallback */\n    border: 1px solid rgba(78,48,67, 0.8);\n    background: rgba(0,0,0,0.15);\n    border-radius: 2px;\n    box-shadow: \n        0 1px 0 rgba(255,255,255,0.2), \n        inset 0 1px 1px rgba(0,0,0,0.1);\n    -webkit-transition: all 0.3s ease-out;\n    -moz-transition: all 0.3s ease-out;\n    -ms-transition: all 0.3s ease-out;\n    -o-transition: all 0.3s ease-out;\n    transition: all 0.3s ease-out;\n\n    /* Font styles */\n    font-family: 'Raleway', 'Lato', Arial, sans-serif;\n    color: #fff;\n    font-size: 13px;\n}",
-			"settings":
-			{
-				"buffer_size": 1067,
-				"line_ending": "Unix",
-				"name": ".form-4 {"
-			}
-		},
-		{
-			"contents": "/* styles */\n\nbody {\n	/**padding pushes content below navigation **/\n	padding-top: 70px;\n	font-family: 'Candal', sans-serif;\n}\n\nnav {\n	position: fixed;\n	top: 0;\n	left: 0;\n	background: #fafafa;\n	border-bottom: 2px solid #ccc;\n	height: 70px;\n	width: 100%;\n}\n\nnav ul {\n    float: right;\n    width: auto;\n}   \n\nnav li {\n	float: left;\n	width: auto;\n}\n\nnav li a {\n	padding: 25px 10px;\n	display: block;\n	text-decoration: none;\n	color: #666666;\n}\n\n#brand {\n    color: transparent;\n    background: url(../images/z.png) no-repeat top left;\n    background-size: contain;\n    height: 60px;\n    width: 60px;\n    float: left;\n    margin: 5px;\n} \n\n.container {\n	width: 1024px;\n	margin: 0 auto;\n	text-align: center;\n	font-size: 24px;\n}\n\n#hero {\n	background: url(../images/zebra-hero.jpg) no-repeat;\n	color: #fafafa;\n	text-align: center;\n	background-size: cover;\n	height: 350px;\n	padding: 25px 0;\n}\n\n#hero img {\n	width: 150px;\n	border-radius: 50%;\n}\n\n.column {\n	float: left;\n	width: 30%;\n	padding: 15px;\n	text-align: center;\n	font-size: 18px;\n}\n\n.column img {\n	width: 90%;\n	max-width: 90%;\n	border-radius: 50%;\n}\n\n#social {\n	background: #57BEC5;\n	color: #fafafa;\n	padding: 25px 0;\n	overflow: hidden;\n	width: 100%;\n}\n\n#social li{\n	float: left;\n	width: auto;\n	padding: 20px;\n	display: inline;\n	text-align: center;\n}\n\n#social ul {\n	display: inline-block;\n}\n\n.clear{clear: both;}",
-			"file": "/home/gretchnm/gdi/html-int/workshop-files/css/styles.css",
-			"file_size": 1319,
-			"file_write_time": 1462157114000000,
-			"settings":
-			{
-				"buffer_size": 1358,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -220,19 +184,27 @@
 	},
 	"file_history":
 	[
-		"/var/www/html/style/styles1.css",
-		"/var/www/html/index.php",
+		"/var/www/html/register.html",
+		"/var/www/html/style/styles.css",
+		"/var/www/html/auth_register.php",
+		"/var/www/html/config.php",
+		"/var/www/html/form.html",
 		"/var/www/html/jobnums.php",
+		"/var/www/html/index.php",
+		"/home/gretchnm/gdi/html-int/workshop-files/structure.html",
+		"/home/gretchnm/gdi/html-int/workshop-files/css/styles.css",
+		"/var/www/html/sites.php",
+		"/var/www/html/jobsitenum.php",
+		"/var/www/html/jobsites.php",
+		"/var/www/html/oldnames.php",
 		"/var/www/html/menu.php",
-		"/var/www/html/controller/main_func.php",
 		"/var/www/html/form1.html",
+		"/var/www/html/style/styles1.css",
+		"/var/www/html/controller/main_func.php",
 		"/var/www/html/junk.php",
 		"/home/gretchnm/gdi/html-int/workshop-files/css/global.css",
 		"/home/gretchnm/gdi/html-int/workshop-files/structure1.html",
 		"/home/gretchnm/gdi/html-int/workshop-files/junk.html",
-		"/var/www/html/jobsitenum.php",
-		"/var/www/html/jobsites.php",
-		"/var/www/html/config.php",
 		"/var/www/html/header.php",
 		"/var/www/html/pwjunk4.php",
 		"/var/www/html/jobnumrequest.php",
@@ -272,6 +244,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"verify",
+			"}\n",
 			"50",
 			"center",
 			"%;\n",
@@ -320,7 +294,7 @@
 			"*/\n"
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -350,153 +324,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "form.html",
-					"settings":
-					{
-						"buffer_size": 1859,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1484,
-								1484
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "style/styles.css",
-					"settings":
-					{
-						"buffer_size": 3708,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1035,
-								1035
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 221.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
-				{
-					"buffer": 2,
-					"file": "/home/gretchnm/gdi/html-int/workshop-files/structure.html",
-					"settings":
-					{
-						"buffer_size": 2413,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								780,
-								780
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"settings":
-					{
-						"buffer_size": 1067,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1067,
-								1067
-							]
-						],
-						"settings":
-						{
-							"auto_name": ".form-4 {",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/home/gretchnm/gdi/html-int/workshop-files/css/styles.css",
-					"settings":
-					{
-						"buffer_size": 1358,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1296,
-								1296
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 717.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -517,18 +346,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.59216575273,
 			1.0
 		],
 		"rows":

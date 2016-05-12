@@ -1,6 +1,4 @@
-
 <!DOCTYPE html>
-
 
 <?php
 // gotta have a session to see anything
@@ -19,9 +17,6 @@ if ($_SESSION['loggedin'] != 1){
     <h3>Job Sites</h3>
 <?php
 	include 'config.php';
-
-	//$db= pg_connect("host=" . PGHOST . " dbname=" . PGDATABASE . " user=" . PGUSER . " password=" . PGPASSWORD) or die('Could not connect to database server.');
-  $db = postg_connect();
 
   // This is safe, since $_POST is converted automatically
   $recSites = pg_query($db, 'SELECT * FROM tblsites ORDER BY fldsitename ASC');

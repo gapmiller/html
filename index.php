@@ -11,7 +11,6 @@ session_start();
 // this page assumes the person is logged out until proven otherwise
 $_SESSION['loggedin'] = 0;
 include 'config.php';
-$db= pg_connect("host=" . PGHOST . " dbname=" . PGDATABASE . " user=" . PGUSER . " password=" . PGPASSWORD) or die('Could not connect to database server.');
 
 if (isset( $_GET['type'])&& $_GET['type']=='login'){
     // read username and password if they suppled a username

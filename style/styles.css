@@ -49,11 +49,14 @@ nav li a {
 	background-size: cover;
 	height: 350px;
 	padding: 25px 0;
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+    color: white;
+    text-shadow: 0 2px 1px rgba(0,0,0,0.3);
 }
 
 .form-4 {
     /* Size and position */
-    width: 300px;
+    width: 400px;
     margin: 60px left 30px;
     padding: 10px;
     position: relative;
@@ -68,6 +71,13 @@ nav li a {
     font-size: 36px;
     font-weight: bold;
     padding-bottom: 20px;
+}
+
+.form-4 a {    
+    font-size: 36px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: #EEEEEE;
 }
 
 .form-4 input[type=text],
