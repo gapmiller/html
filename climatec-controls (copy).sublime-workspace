@@ -4,6 +4,7 @@
 		"selected_items":
 		[
 			[
+<<<<<<< HEAD
 				"a",
 				"a"
 			],
@@ -18,6 +19,82 @@
 			[
 				"h",
 				"h1	Tag"
+=======
+				"logged",
+				"loggedin"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"ma",
+				"max-width"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"h",
+				"h3	Tag"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"ba",
+				"background-size"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"ar",
+				"article	Tag"
+			],
+			[
+				"hea",
+				"header	Tag"
+>>>>>>> gdi
 			],
 			[
 				"_",
@@ -151,6 +228,49 @@
 	},
 	"buffers":
 	[
+<<<<<<< HEAD
+=======
+		{
+			"file": "/home/gretchnm/gdi/html-int/workshop-files/structure.html",
+			"settings":
+			{
+				"buffer_size": 2412,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 7519,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "menu.php",
+			"settings":
+			{
+				"buffer_size": 554,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "jobnums.php",
+			"settings":
+			{
+				"buffer_size": 1242,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/gretchnm/gdi/html-int/workshop-files/css/styles.css",
+			"settings":
+			{
+				"buffer_size": 1358,
+				"line_ending": "Unix"
+			}
+		}
+>>>>>>> gdi
 	],
 	"build_system": "",
 	"command_palette":
@@ -184,6 +304,7 @@
 	},
 	"file_history":
 	[
+<<<<<<< HEAD
 		"/var/www/html/register.html",
 		"/var/www/html/style/styles.css",
 		"/var/www/html/auth_register.php",
@@ -210,6 +331,22 @@
 		"/var/www/html/jobnumrequest.php",
 		"/var/www/html/postgrestest2.php",
 		"/var/www/html/LICENSE",
+=======
+		"/home/gretchnm/gdi/html-int/workshop-files/css/global.css",
+		"/home/gretchnm/gdi/html-int/workshop-files/structure1.html",
+		"/home/gretchnm/gdi/html-int/workshop-files/junk.html",
+		"/var/www/html/jobsitenum.php",
+		"/var/www/html/jobsites.php",
+		"/var/www/html/config.php",
+		"/var/www/html/menu.php",
+		"/var/www/html/header.php",
+		"/var/www/html/pwjunk4.php",
+		"/var/www/html/jobnums.php",
+		"/var/www/html/jobnumrequest.php",
+		"/var/www/html/postgrestest2.php",
+		"/var/www/html/LICENSE",
+		"/var/www/html/index.php",
+>>>>>>> gdi
 		"/var/www/html/sites.html",
 		"/var/www/html/pwjunkpartial.php",
 		"/var/www/html/pwjunk.php",
@@ -244,6 +381,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+<<<<<<< HEAD
 			"verify",
 			"}\n",
 			"50",
@@ -253,6 +391,8 @@
 			"90",
 			"%;",
 			"banner1",
+=======
+>>>>>>> gdi
 			"logout",
 			";*/\n",
 			"menu",
@@ -324,8 +464,158 @@
 	"groups":
 	[
 		{
+<<<<<<< HEAD
 			"sheets":
 			[
+=======
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/gretchnm/gdi/html-int/workshop-files/structure.html",
+					"settings":
+					{
+						"buffer_size": 2412,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								789,
+								789
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.php",
+					"settings":
+					{
+						"buffer_size": 7519,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5528,
+								5528
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1577.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "menu.php",
+					"settings":
+					{
+						"buffer_size": 554,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "jobnums.php",
+					"settings":
+					{
+						"buffer_size": 1242,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								489,
+								489
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "/home/gretchnm/gdi/html-int/workshop-files/css/styles.css",
+					"settings":
+					{
+						"buffer_size": 1358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								265,
+								265
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+>>>>>>> gdi
 			]
 		}
 	],
@@ -346,11 +636,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.664606376057,
 			1.0
 		],
 		"rows":
