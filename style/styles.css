@@ -43,16 +43,28 @@ nav li a {
 
 
 #hero {
-	background: url(../images/banner1.jpg) no-repeat;
-	color: #fafafa;
-	text-align: left;
-	background-size: cover;
-	height: 350px;
-	padding: 25px 0;
+    background: url(../images/banner1.jpg) no-repeat;
+    color: #fafafa;
+    text-align: left;
+    background-size: cover;
+    height: 350px;
+    padding: 25px 0;
     font-family: 'Raleway', 'Lato', Arial, sans-serif;
     color: white;
     text-shadow: 0 2px 1px rgba(0,0,0,0.3);
 }
+
+#message {
+    color: red;
+    height: 60px;
+    width: 400px;
+    float: left;
+    margin: 5px;
+    
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+    color: white;
+    text-shadow: 0 2px 1px rgba(0,0,0,0.3);
+} 
 
 .form-4 {
     /* Size and position */
@@ -71,6 +83,13 @@ nav li a {
     font-size: 36px;
     font-weight: bold;
     padding-bottom: 20px;
+}
+
+.form-4 h2 {
+    font-size: 36px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: red;
 }
 
 .form-4 a {    
@@ -186,6 +205,10 @@ nav li a {
 
 .no-placeholder .form-4 label {
     display: block;
+}
+
+.message{
+
 }
 
 .clear{clear: both;}

@@ -10,13 +10,8 @@ revised for PostgreSQL by Gretchen Miller
 session_start();
 // this page assumes the person is logged out until proven otherwise
 include 'config.php';
-<<<<<<< HEAD
-=======
 include 'main_func.php';
 $db = postg_connect() or die('Could not connect to database server.');
-
-/*
->>>>>>> gdi
 
 if (isset( $_GET['type'])&& $_GET['type']=='login'){
     // read username and password if they suppled a username
@@ -102,8 +97,6 @@ die(
 </table>');
 }
 
-*/
-
 ?>
 
 
@@ -111,15 +104,9 @@ die(
 <html>
 
 <head>
-    <title>Climatec Controls</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="style/reset.css">
-    <h2>Climatec Controls Job Sites and Job Numbers</h2>
-=======
     <h2>Climatec Controls Job Sites and Job Numbers</h2><link rel="stylesheet" href="css/reset.css"> <!-- Resets browser styles -->
     <link rel="stylesheet" href="css/styles.css"> <!-- Your stylesheet -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" /> <!-- Triggers responsive -->
->>>>>>> gdi
     <link rel="icon" href="favicon-16x16.png">
     <header id="masthead"> <!-- Start Header area -->
             <nav>
@@ -180,7 +167,6 @@ if ($_SESSION['loggedin']==NULL){
 }
 ?>
 
-<!--
     <tr>
         <td style="border-style: solid;border-width: 0px;background-color: #DFDFFF;"><form action="<?php echo $_SERVER['PHP_SELF'].'?type=login'?>" method="post" ><h1>Login</h1>
 <table style='border:0px solid #000000;'>
@@ -239,6 +225,6 @@ Email: <input type="text" size="15" maxlength="25" name="email">
     </tr>
 </table>
 
--->
+
 <br><font face="Tahoma"><a target="_blank" href="http://www.phpfreecode.com/"><span style="font-size: 8pt; text-decoration: none">PHP Free Code</span></a></font>
 </body></html>

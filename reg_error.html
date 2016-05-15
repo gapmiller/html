@@ -35,25 +35,39 @@
             <form class="form-4" action="auth_register.php" method="POST">
                 <h1>Register <a href="form.html"> or go back</a></h1>
                 <p>
-                    <label for="username">Email</label>
-                    <input type="text" name="username" placeholder="Email" required>
-                </p>
-                
+                    <label for="username">Username</label>
+                    <input type="text" name="username" placeholder="Username" required>
+                </p>                
                 <p>
                     <label for="password">Password</label>
                     <input type="password" name='password' placeholder="Password" required> 
                 </p>
-
                 <p>
                     <label for="password2">Password</label>
                     <input type="password" name='password2' placeholder="Re-enter Password" required> 
                 </p>
-
+                <p>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" placeholder="Email" required>
+                </p>
                 <p>
                     <input type="submit" name="submit" value="Continue">
-                    User name already exists or passwords did not match.
-                </p>       
+                    User or email already exists, or password did not match.
+                </p> 
             </form>
+
+            <div class="container">
+                test
+                <?php
+                    $message = "message";
+                    echo $message;
+                    if ($message !== ""){
+                        echo 'message';    
+                    } else {
+                        echo 'no message';
+                    }
+                ?>
+            </div> 
         </section> 
-    </body>
+    </body>    
 </html>
