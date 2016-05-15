@@ -9,18 +9,26 @@
 
 	$query = pg_exec($db,"SELECT fldusername,fldpassword FROM tblUsers WHERE fldusername = '$username'") or die(pg_last_error());
 	$data = pg_fetch_array($query);
-	echo $data;
-	echo "Need to finish the code to register users.";
-	//$query = pg_exec($db,"SELECT fldusername,fldpassword FROM tblUsers WHERE fldusername = '$username'") or die(pg_last_error());
-	//$data = pg_fetch_array($query);
+	
 
 	//check username and password
-	//if (password_verify ($password, $data['fldpassword'])) {
-	//    setcookie("user", "$username", time()+3600);
-	 //   $_SESSION['loggedin'] = 1;                
-	//    header("Location: menu.php");
-	//}else{
-	//	header ("Location: register.html");
-	//}
-
+	if ($data) {
+	    echo "User already exists";
+	    header("Location: reg_error.html");
+	}else{
+		echo "Need to add user.";
+		if ($password != $password2){
+			echo "passwords don't match";
+			usleep(10);
+			//header("Location: reg_error.html");
+        }else{
+            $hpassword = password_hash($password, PASSWORD_DEFAULT);
+            $query = "INSERT INTO tblUsers (fldusername, fldpassword, fldcreated) VALUES('$username','$hpassword','$email')";
+            pg_exec($query) or die(pg_last_error());
+            welcome( "The user $username has been successfully registered.");
+            usleep(10);
+            echo "wake up!";
+            die();
+        }        
+    } 
 ?>

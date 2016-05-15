@@ -1,0 +1,356 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"logged",
+				"loggedin"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"ma",
+				"max-width"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"h",
+				"h3	Tag"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"ba",
+				"background-size"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"ar",
+				"article	Tag"
+			],
+			[
+				"hea",
+				"header	Tag"
+			],
+			[
+				"_",
+				"_SESSION"
+			],
+			[
+				"passw",
+				"password_hash"
+			],
+			[
+				"q",
+				"qryName"
+			],
+			[
+				"pg_f",
+				"pg_fetch_result"
+			],
+			[
+				"is_n",
+				"is_null"
+			],
+			[
+				"fldsit",
+				"fldsitename"
+			],
+			[
+				"fld",
+				"fldsiteaddress1"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"pri",
+				"print_r"
+			],
+			[
+				"rec",
+				"recCities"
+			],
+			[
+				"p",
+				"php"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"hos",
+				"hostname"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Toggle Block Comment"
+			]
+		],
+		"width": 440.0
+	},
+	"console":
+	{
+		"height": 310.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/html/climatec-controls2.sublime-project",
+		"/home/gretchnm/gdi/html-int/workshop-files/css/styles.css",
+		"/var/www/html/jobnums.php",
+		"/var/www/html/menu.php",
+		"/var/www/html/index.php",
+		"/home/gretchnm/gdi/html-int/workshop-files/structure.html",
+		"/home/gretchnm/gdi/html-int/workshop-files/css/global.css",
+		"/home/gretchnm/gdi/html-int/workshop-files/structure1.html",
+		"/home/gretchnm/gdi/html-int/workshop-files/junk.html",
+		"/var/www/html/jobsitenum.php",
+		"/var/www/html/jobsites.php",
+		"/var/www/html/config.php",
+		"/var/www/html/header.php",
+		"/var/www/html/pwjunk4.php",
+		"/var/www/html/jobnumrequest.php",
+		"/var/www/html/postgrestest2.php",
+		"/var/www/html/LICENSE",
+		"/var/www/html/sites.html",
+		"/var/www/html/pwjunkpartial.php",
+		"/var/www/html/pwjunk.php",
+		"/home/gretchnm/climatecdb/esql_add1.txt",
+		"/home/gretchnm/climatecdb/controls_database_info.odt",
+		"/var/www/btgctrls/config.php",
+		"/var/www/html/pwjunk3.php",
+		"/var/www/html/postgrestest.php",
+		"/var/www/html/postgrestest.php~",
+		"/var/www/html/view/sites.html",
+		"/var/www/html/model/sites.php",
+		"/var/www/html/index.html",
+		"/var/www/html/jobsites.html",
+		"/var/www/html/info.php",
+		"/var/www/html/jobnums.html",
+		"/var/www/html/oldnames.html",
+		"/var/www/html/indexold.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"logout",
+			";*/\n",
+			"menu",
+			"{\n",
+			"$site",
+			"$a",
+			"0",
+			"logout",
+			"Welcome",
+			"welcome",
+			"fetch",
+			"fldPassword",
+			"fldUsername",
+			"tblu",
+			"my",
+			"mysql",
+			"mysql_query",
+			"setup",
+			"mysql_num_rows",
+			"mysql_fetch_array",
+			"mysql_error",
+			"myarray",
+			"view/",
+			"($db,",
+			"mysql_query(",
+			"$db_name",
+			"$result",
+			"automatic setup start is started...",
+			"$link",
+			"$db",
+			"$link",
+			"  \n",
+			"PGDATABASE",
+			"= ",
+			" = ",
+			"\";",
+			"$",
+			"!\";\n",
+			"*/\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$jobnum",
+			"fldpassword",
+			"fldusername",
+			"pg_query",
+			"pg_num_rows",
+			"pg_fetch_array",
+			"pg_last_error",
+			"arraySites",
+			"",
+			"(",
+			"pg_exec($db,",
+			"$db",
+			", ",
+			"\");",
+			"("
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 318.0,
+	"status_bar_visible": true
+}
