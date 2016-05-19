@@ -7,6 +7,7 @@
 	$password=$_POST['password'];
 	$password2=$_POST['password2'];
 	$email = $_POST['email'];
+    $message = "Hi!";
 
     // Do passwords match?
 		if ($password != $password2){
@@ -18,7 +19,8 @@
             $checkemail = pg_exec("SELECT fldEmail FROM tblUsers WHERE fldEmail='$email'");
             $email_exist = pg_num_rows($checkemail);
             if ($email_exist||$username_exist) {
-                header("Location: reg_error.html");
+                $message = "Username or email exists.";
+                header("Location: register.php");
             }else{
                 //Everything seems good, lets insert.
                 $hpassword = password_hash($password, PASSWORD_DEFAULT);

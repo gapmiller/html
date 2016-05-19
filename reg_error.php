@@ -52,13 +52,19 @@
                 </p>
                 <p>
                     <input type="submit" name="submit" value="Continue">
-                </p>
-                <h2> <?php
-                if ($message){
-                    print($message);    
-                }
-                ?></h2>
+                    User or email already exists, or password did not match.
+                </p> 
             </form>
+
+            <div class="container">
+                <?php
+                    if ($message){
+                        echo 'message';
+                    } else {
+                        echo 'no message';
+                    }
+                ?>
+            </div> 
         </section> 
-    </body>
+    </body>    
 </html>

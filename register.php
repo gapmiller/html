@@ -52,22 +52,16 @@
                 </p>
                 <p>
                     <input type="submit" name="submit" value="Continue">
-                    User or email already exists, or password did not match.
-                </p> 
-            </form>
-
-            <div class="container">
-                test
+                </p>
+                <h2> 
                 <?php
-                    $message = "message";
-                    echo $message;
-                    if ($message !== ""){
-                        echo 'message';    
+                    if ($message){
+                        echo 'message';
                     } else {
                         echo 'no message';
                     }
-                ?>
-            </div> 
+                ?></h2>
+            </form>
         </section> 
-    </body>    
+    </body>
 </html>

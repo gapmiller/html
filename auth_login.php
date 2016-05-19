@@ -15,7 +15,7 @@
 	    $_SESSION['loggedin'] = 1;                
 	    header("Location: menu.php");
 	}else{
-		header ("Location: register.html");
+		header ("Location: register.php");
 	}
 
 ?>
