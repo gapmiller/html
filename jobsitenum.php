@@ -1,17 +1,14 @@
-
-<!DOCTYPE html>
-
-
 <?php
 // gotta have a session to see anything
 session_start();
-if ($_SESSION['loggedin'] != 1){
+if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
   header("Location: index.php"); 
   exit; 
 }
 ?>
-
+<!DOCTYPE html>
 <html>
+<?php include('header.php'); ?>
   <head>
     <title>Climatec Controls-Job Numbers By Site</title>
   </head>

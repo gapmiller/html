@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"fld",
+				"fldactive"
+			],
+			[
+				"USER",
+				"user"
+			],
+			[
+				"unse",
+				"unset"
+			],
+			[
+				"_",
+				"_"
+			],
+			[
 				"pa",
 				"password2"
 			],
@@ -58,10 +74,6 @@
 			[
 				"h",
 				"h1	Tag"
-			],
-			[
-				"_",
-				"_POST"
 			],
 			[
 				"fo",
@@ -152,10 +164,6 @@
 				"fldsitename"
 			],
 			[
-				"fld",
-				"fldsiteaddress1"
-			],
-			[
 				"pri",
 				"print_r"
 			],
@@ -184,13 +192,10 @@
 	"buffers":
 	[
 		{
-			"contents": "<?php \n	//include 'db.inc.php'; \n	include 'config.php';\n	session_start();\n\n	$username=$_POST['username'];\n	$password=$_POST['password'];\n	$password2=$_POST['password2'];\n	$email = $_POST['email'];\n    $message = \"\";\n\n    // Do passwords match?\n		if ($password != $password2){\n			header(\"Location: reg_error.html\");\n        }else{\n        	//Has the username or email been used?\n            $checkuser = pg_exec($db, \"SELECT fldusername FROM tblUsers WHERE fldusername='$username'\");\n            $username_exist = pg_num_rows($checkuser);\n            $checkemail = pg_exec(\"SELECT fldEmail FROM tblUsers WHERE fldEmail='$email'\");\n            $email_exist = pg_num_rows($checkemail);\n            if ($email_exist||$username_exist) {\n                $message = \"Username or email exists.\";\n                header(\"Location: register.php\");\n            }else{\n                //Everything seems good, lets insert.\n                $hpassword = password_hash($password, PASSWORD_DEFAULT);\n                $query = \"INSERT INTO tblUsers (fldusername, fldpassword, fldEmail) VALUES('$username','$hpassword','$email')\";\n                pg_exec($query) or die(pg_last_error());\n                header(\"Location: form.html\");\n            }\n        }        \n     \n?>",
-			"file": "auth_register.php",
-			"file_size": 1259,
-			"file_write_time": 1463417417000000,
+			"file": "auth_register_form.php",
 			"settings":
 			{
-				"buffer_size": 1256,
+				"buffer_size": 2970,
 				"line_ending": "Unix"
 			}
 		},
@@ -198,39 +203,7 @@
 			"file": "style/styles.css",
 			"settings":
 			{
-				"buffer_size": 4068,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "reg_error.php",
-			"settings":
-			{
-				"buffer_size": 2635,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "register.php",
-			"settings":
-			{
-				"buffer_size": 2523,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "form.html",
-			"settings":
-			{
-				"buffer_size": 1913,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "auth_login.php",
-			"settings":
-			{
-				"buffer_size": 573,
+				"buffer_size": 4681,
 				"line_ending": "Unix"
 			}
 		}
@@ -267,21 +240,28 @@
 	},
 	"file_history":
 	[
+		"/var/www/html/auth_register.php",
 		"/var/www/html/jobnumrequest.php",
-		"/var/www/html/test.html",
+		"/var/www/html/jobnums.php",
+		"/var/www/html/jobsitenum.php",
+		"/var/www/html/jobsites.php",
+		"/var/www/html/header.php",
+		"/var/www/html/index.php",
+		"/var/www/html/oldnames.php",
+		"/var/www/html/junk.html",
+		"/var/www/html/info.php",
 		"/var/www/html/auth_login.php",
+		"/var/www/html/form.html",
+		"/var/www/html/index_old.php",
+		"/var/www/html/reg_error.php",
+		"/var/www/html/index.php~",
+		"/var/www/html/test.html",
 		"/var/www/html/register.html",
 		"/var/www/html/reg_error.html",
-		"/var/www/html/form.html",
-		"/var/www/html/index.php",
 		"/var/www/html/pwjunk4.php",
 		"/var/www/html/menu.php",
 		"/var/www/html/pwjunkpartial.php",
 		"/var/www/html/postgrestest2.php",
-		"/var/www/html/oldnames.php",
-		"/var/www/html/header.php",
-		"/var/www/html/info.php",
-		"/var/www/html/auth_register.php",
 		"/home/gretchnm/gdi/python/circle_area.py",
 		"/home/gretchnm/gdi/python/game.py",
 		"/home/gretchnm/gdi/python/game2.py",
@@ -290,12 +270,9 @@
 		"/home/gretchnm/gdi/python/myScript.py",
 		"/var/www/html/style/styles.css",
 		"/var/www/html/config.php",
-		"/var/www/html/jobnums.php",
 		"/home/gretchnm/gdi/html-int/workshop-files/structure.html",
 		"/home/gretchnm/gdi/html-int/workshop-files/css/styles.css",
 		"/var/www/html/sites.php",
-		"/var/www/html/jobsitenum.php",
-		"/var/www/html/jobsites.php",
 		"/var/www/html/form1.html",
 		"/var/www/html/style/styles1.css",
 		"/var/www/html/controller/main_func.php",
@@ -336,6 +313,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"($",
+			"=== ",
+			"\">\n",
+			"('message')",
+			"10",
+			"form-4",
 			">",
 			");\n",
 			":\n",
@@ -394,6 +377,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"['message']",
+			"auth-form",
 			"$jobnum",
 			"fldpassword",
 			"fldusername",
@@ -424,46 +409,52 @@
 			[
 				{
 					"buffer": 0,
-					"file": "auth_register.php",
+					"file": "auth_register_form.php",
 					"settings":
 					{
-						"buffer_size": 1256,
+						"buffer_size": 2970,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								213,
-								213
+								1606,
+								1606
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 408.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
 					"buffer": 1,
 					"file": "style/styles.css",
 					"settings":
 					{
-						"buffer_size": 4068,
+						"buffer_size": 4681,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								879,
-								879
+								1755,
+								1755
 							]
 						],
 						"settings":
@@ -473,118 +464,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 649.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "reg_error.php",
-					"settings":
-					{
-						"buffer_size": 2635,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2571,
-								2571
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 663.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "register.php",
-					"settings":
-					{
-						"buffer_size": 2523,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2458,
-								2458
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 566.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "form.html",
-					"settings":
-					{
-						"buffer_size": 1913,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								517,
-								517
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 357.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "auth_login.php",
-					"settings":
-					{
-						"buffer_size": 573,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								573,
-								573
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1499.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -609,11 +489,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.586280130398,
 			1.0
 		],
 		"rows":
@@ -652,6 +539,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 172.0,
+	"side_bar_width": 227.0,
 	"status_bar_visible": true
 }

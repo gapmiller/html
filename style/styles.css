@@ -48,18 +48,18 @@ nav li a {
     text-align: left;
     background-size: cover;
     height: 350px;
-    padding: 25px 0;
+    padding: 50px 0;
     font-family: 'Raleway', 'Lato', Arial, sans-serif;
     color: white;
     text-shadow: 0 2px 1px rgba(0,0,0,0.3);
 }
 
-.form-4 {
+.auth-form {
     /* Size and position */
-    width: 400px;
+    width: 375px;
     margin: 60px left 30px;
     padding: 10px;
-    position: relative;
+    float: left;
 
     /* Font styles */
     font-family: 'Raleway', 'Lato', Arial, sans-serif;
@@ -67,28 +67,40 @@ nav li a {
     text-shadow: 0 2px 1px rgba(0,0,0,0.3);
 }
 
-.form-4 h1 {
+.reg-form {
+    /* Size and position */
+    width: 375px;
+    margin: 60px left 30px;
+    padding: 10px;
+    float: left;
+
+    /* Font styles */
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+    color: white;
+    text-shadow: 0 2px 1px rgba(0,0,0,0.3);
+}
+
+.reg-form h1,
+.auth-form h1 {
     font-size: 36px;
     font-weight: bold;
     padding-bottom: 20px;
 }
 
-.form-4 h2 {
-    font-size: 36px;
+.reg-form h2,
+.auth-form h2 {
+    font-size: 18px;
     font-weight: bold;
     padding-bottom: 20px;
-    color: red;
+    color: white;
+    text-shadow: 0 2px 1px rgba(0,0,0,5);
 }
 
-.form-4 a {    
-    font-size: 36px;
-    font-weight: bold;
-    padding-bottom: 20px;
-    color: #EEEEEE;
-}
-
-.form-4 input[type=text],
-.form-4 input[type=password] {
+.reg-form input[type=text],
+.reg-form input[type=password],
+.reg-form input[type=email],
+.auth-form input[type=text],
+.auth-form input[type=password] {
     /* Size and position */
     width: 100%;
     padding: 8px 4px 8px 10px;
@@ -112,29 +124,29 @@ nav li a {
 
 /* Placeholder style (from http://stackoverflow.com/questions/2610497/change-an-inputs-html5-placeholder-color-with-css) */
 
-.form-4 input::-webkit-input-placeholder {
+.auth-form input::-webkit-input-placeholder {
     color: rgba(37,21,26,0.5);
     text-shadow: 0 1px 0 rgba(255,255,255,0.15);
 }
 
-.form-4 input:-moz-placeholder {
+.auth-form input:-moz-placeholder {
     color: rgba(37,21,26,0.5);
     text-shadow: 0 1px 0 rgba(255,255,255,0.15);
 }
 
-.form-4 input:-ms-input-placeholder {
+.auth-form input:-ms-input-placeholder {
     color: rgba(37,21,26,0.5);
     text-shadow: 0 1px 0 rgba(255,255,255,0.15);
 }
 
-.form-4 input[type=text]:hover,
-.form-4 input[type=password]:hover {
+.auth-form input[type=text]:hover,
+.auth-form input[type=password]:hover {
     border-color: #333;
 }
 
-.form-4 input[type=text]:focus,
-.form-4 input[type=password]:focus,
-.form-4 input[type=submit]:focus {
+.auth-form input[type=text]:focus,
+.auth-form input[type=password]:focus,
+.auth-form input[type=submit]:focus {
     box-shadow: 
         0 1px 0 rgba(255,255,255,0.2), 
         inset 0 1px 1px rgba(0,0,0,0.1),
@@ -143,15 +155,16 @@ nav li a {
 }
 
 /* Fallback */
-.no-boxshadow .form-4 input[type=text]:focus,
-.no-boxshadow .form-4 input[type=password]:focus {
+.no-boxshadow .auth-form .reg-form input[type=text]:focus,
+.no-boxshadow .auth-form .reg-form input[type=password]:focus {
     outline: 1px solid white;
 }
 
-.form-4 input[type=submit] {
+.auth-form input[type=submit],
+.reg-form input[type=submit] {
     /* Size and position */
-    width: 100%;
-    padding: 8px 5px;
+    width: 104.2%;
+    padding: 8px 65px;
     
     /* Styles */
     background: #634056;
@@ -170,28 +183,34 @@ nav li a {
     font-family: 'Raleway', 'Lato', Arial, sans-serif;
 }
 
-.form-4 input[type=submit]:hover {
+.auth-form input[type=submit]:hover {
+    box-shadow: 
+        inset 0 1px rgba(255,255,255,0.2), 
+        inset 0 20px 30px rgba(99,64,86,0.5);
+}
+
+.reg-form input[type=submit]:hover {
     box-shadow: 
         inset 0 1px rgba(255,255,255,0.2), 
         inset 0 20px 30px rgba(99,64,86,0.5);
 }
 
 /* Fallback */
-.no-boxshadow .form-4 input[type=submit]:hover {
+.no-boxshadow .auth-form .reg-form input[type=submit]:hover {
     background: #594642;
 }
 
-.form-4 label {
+.auth-form .reg-form label {
     display: none;
     padding: 0 0 5px 2px;
     cursor: pointer;
 }
 
-.form-4 label:hover ~ input {
+.auth-form .reg-form label:hover ~ input {
     border-color: #333;
 }
 
-.no-placeholder .form-4 label {
+.no-placeholder .auth-form .reg-form label {
     display: block;
 }
 

@@ -1,5 +1,9 @@
+<?php session_start(); ?>
 <!doctype html>
 <html>
+
+<?php //include('header.php'); ?>
+
     <head>
         <title>Climatec Controls</title>
         <link rel="stylesheet" href="style/reset.css">
@@ -15,16 +19,7 @@
                     <h1 id="brand"></h1>
                     <ul>
                         <li>
-                            <a href="jobsitenum.php">Job numbers listed by site</a>
-                        </li>
-                        <li>
-                            <a href="jobsites.php">Sites</a>
-                        </li>
-                        <li>
-                            <a href="jobnums.php">Job numbers</a>
-                        </li>
-                        <li>
-                            <a href="oldnames.php">Sites listed by previous names</a>
+                            <a href="index.php">Home</a>
                         </li>
                     </ul>
                 </div>
@@ -32,8 +27,29 @@
         </header>
 
         <section id="hero">
-            <form class="form-4" action="auth_register.php" method="POST">
-                <h1>Register <a href="form.html"> or go back</a></h1>
+
+            <form class="auth-form" action="auth_register.php" method="POST">
+                <h1>Login</h1>
+                <p>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" placeholder="Username" required>
+                </p>                
+                <p>
+                    <label for="password">Password</label>
+                    <input type="password" name='password' placeholder="Password" required> 
+                <p>
+                    <input type="submit" name="submit" value="Login">
+                </p>
+                <h2> 
+                <?php
+                    if ($_SESSION['message1'] != NULL){
+                        echo $_SESSION['message1'];
+                    }
+                ?>
+                </h2>
+            </form>
+            <form class="reg-form" action="auth_register.php" method="POST">
+                <h1>Register</h1>
                 <p>
                     <label for="username">Username</label>
                     <input type="text" name="username" placeholder="Username" required>
@@ -48,23 +64,21 @@
                 </p>
                 <p>
                     <label for="email">Email</label>
-                    <input type="text" name="email" placeholder="Email" required>
+                    <input type="email" name="email" placeholder="Email" required>
                 </p>
                 <p>
-                    <input type="submit" name="submit" value="Continue">
-                    User or email already exists, or password did not match.
-                </p> 
-            </form>
-
-            <div class="container">
+                    <input type="submit" name="submit" value="Register">
+                </p>
+                <h2> 
                 <?php
-                    if ($message){
-                        echo 'message';
-                    } else {
-                        echo 'no message';
-                    }
+                    if ($_SESSION['message2'] != NULL){
+                        echo $_SESSION['message2'];
+                    }    
                 ?>
-            </div> 
+                </h2>
+            </form>
+        <!--
         </section> 
-    </body>    
+    -->
+    </body>
 </html>

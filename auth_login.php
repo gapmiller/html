@@ -13,9 +13,9 @@
 	if (password_verify ($password, $data['fldpassword'])) {
 	    setcookie("user", "$username", time()+3600);
 	    $_SESSION['loggedin'] = 1;                
-	    header("Location: menu.php");
+	    header("Location: index.php");
 	}else{
-		header ("Location: register.php");
+		$message = "Incorrect username or password."
 	}
 
 ?>
