@@ -18,7 +18,6 @@ if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
   include 'config.php';
 
   // This is safe, since $_POST is converted automatically
-  //$recJobs = pg_query($db, 'SELECT * FROM tbljobnumbers  WHERE fldsiteid = 32 ORDER BY fldjobnumber ASC');
   $recJobs = pg_query($db, 'SELECT * FROM tbljobnumbers ORDER BY fldjobnumber ASC');
   $arrayJobnums = pg_fetch_all($recJobs);
   $counter = 1;

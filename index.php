@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+
 <!doctype html>
 <html>
 
@@ -53,7 +54,9 @@
             <?php
                 if ($_SESSION['message1'] != NULL){
                       echo $_SESSION['message1'];
-                  }
+                  }else if ($_SESSION['loggedin'] != 1) {
+                      echo '<a href="auth_register_form.php">Must login to see data.</a>';
+                  }else
             ?>
         </div>
 

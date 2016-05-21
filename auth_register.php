@@ -34,6 +34,8 @@
             echo $data['fldemail'];*/
             if ($data['fldactive'] == "f"){
                 $_SESSION['message1'] = "Account: "  . $data['fldusername'] . " - Your account is not active. Contact the database administrator to confirm your registration.";
+            }else{
+                $_SESSION['message1'] = $data['fldusername'] . " is logged in.";
             }
             header("Location: index.php");
         }else{

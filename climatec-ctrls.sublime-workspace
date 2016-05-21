@@ -4,8 +4,48 @@
 		"selected_items":
 		[
 			[
+				"old",
+				"oldname"
+			],
+			[
+				"arr",
+				"arrayCity"
+			],
+			[
 				"fld",
-				"fldactive"
+				"fldjobnumber"
+			],
+			[
+				"site",
+				"sitenum"
+			],
+			[
+				"tb",
+				"tblpeople"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"tbl",
+				"tblpeople"
+			],
+			[
+				"sa",
+				"salesmanid"
+			],
+			[
+				"rec",
+				"recPeople"
+			],
+			[
+				"fl",
+				"fldsalesman"
+			],
+			[
+				"fldjob",
+				"fldjobnumber"
 			],
 			[
 				"USER",
@@ -168,10 +208,6 @@
 				"print_r"
 			],
 			[
-				"rec",
-				"recCities"
-			],
-			[
 				"p",
 				"php"
 			],
@@ -200,10 +236,50 @@
 			}
 		},
 		{
-			"file": "style/styles.css",
+			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 4681,
+				"buffer_size": 2255,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "header.php",
+			"settings":
+			{
+				"buffer_size": 1871,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "jobsitenum.php",
+			"settings":
+			{
+				"buffer_size": 918,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "oldnames.php",
+			"settings":
+			{
+				"buffer_size": 1326,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "jobnumbers.php",
+			"settings":
+			{
+				"buffer_size": 6841,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "jobsites.php",
+			"settings":
+			{
+				"buffer_size": 4540,
 				"line_ending": "Unix"
 			}
 		}
@@ -240,11 +316,14 @@
 	},
 	"file_history":
 	[
+		"/var/www/html/jobnumbers.php",
+		"/var/www/html/jobjunk.php",
+		"/var/www/html/jobsites.php",
+		"/var/www/html/jobnums.php",
+		"/var/www/html/style/styles.css",
 		"/var/www/html/auth_register.php",
 		"/var/www/html/jobnumrequest.php",
-		"/var/www/html/jobnums.php",
 		"/var/www/html/jobsitenum.php",
-		"/var/www/html/jobsites.php",
 		"/var/www/html/header.php",
 		"/var/www/html/index.php",
 		"/var/www/html/oldnames.php",
@@ -268,7 +347,6 @@
 		"/home/gretchnm/gdi/python/triangle.py",
 		"/home/gretchnm/gdi/python/game3.py",
 		"/home/gretchnm/gdi/python/myScript.py",
-		"/var/www/html/style/styles.css",
 		"/var/www/html/config.php",
 		"/home/gretchnm/gdi/html-int/workshop-files/structure.html",
 		"/home/gretchnm/gdi/html-int/workshop-files/css/styles.css",
@@ -313,6 +391,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"include",
+			"//  ",
+			"$arraySites[0]num",
+			"num",
+			"][[",
+			"$site",
 			"($",
 			"=== ",
 			"\">\n",
@@ -377,6 +461,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"$sitenum",
+			"][",
+			"$arraySites[0]",
+			"$arraySites[0][",
+			"$job",
 			"['message']",
 			"auth-form",
 			"$jobnum",
@@ -404,7 +493,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -419,8 +508,8 @@
 						"selection":
 						[
 							[
-								1606,
-								1606
+								1532,
+								1532
 							]
 						],
 						"settings":
@@ -434,37 +523,171 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 1,
-					"file": "style/styles.css",
+					"file": "index.php",
 					"settings":
 					{
-						"buffer_size": 4681,
+						"buffer_size": 2255,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1755,
-								1755
+								1739,
+								1739
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1499.0,
+						"translation.y": 204.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "header.php",
+					"settings":
+					{
+						"buffer_size": 1871,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								375,
+								375
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 24.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "jobsitenum.php",
+					"settings":
+					{
+						"buffer_size": 918,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								734,
+								734
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "oldnames.php",
+					"settings":
+					{
+						"buffer_size": 1326,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								492,
+								492
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "jobnumbers.php",
+					"settings":
+					{
+						"buffer_size": 6841,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								774,
+								774
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "jobsites.php",
+					"settings":
+					{
+						"buffer_size": 4540,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1082,
+								1082
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -489,18 +712,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.586280130398,
 			1.0
 		],
 		"rows":
@@ -539,6 +755,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 227.0,
-	"status_bar_visible": true
+	"side_bar_width": 139.0,
+	"status_bar_visible": false
 }

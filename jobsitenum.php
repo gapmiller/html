@@ -24,7 +24,7 @@ if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
   $key = "id";
     if ($recSites) {
       foreach ($arraySites as $key => $site) {
-        print_r($site["fldsitename"]);
+        echo'<a href= "jobnumbers.php?num=' . $site["id"].'">'. $site["fldsitename"] . '</a>';
         echo "<br/>";
       }
         unset($site);

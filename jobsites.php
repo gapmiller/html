@@ -24,11 +24,13 @@ if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
   // This is safe, since $_POST is converted automatically
   $recSites = pg_query($db, 'SELECT * FROM tblsites ORDER BY fldsitename ASC');
   $arraySites = pg_fetch_all($recSites);
+  echo $arraySites["fldsitename"];
     
   $key = "id";
     if ($recSites) {
       foreach ($arraySites as $key => $site) {
-        print_r($site["fldsitename"]);
+        //print_r($site["fldsitename"]);
+        echo'<a href= "jobnumbers.php?num=' . $site["id"].'">'. $site["fldsitename"] . '</a>';
         echo "<br/>";
         if (!is_null($site["fldsiteaddress1"])){
           print_r($site["fldsiteaddress1"]);
