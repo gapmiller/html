@@ -19,7 +19,22 @@ if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
 
   <body>
     <?php
-      $sitenum = 32;
+
+//should use JOIN to get names?
+    function Getname ($personid, $db) {
+      //include 'config.php'; 
+      $recPeople = pg_query($db, 'SELECT fldfirstname, fldlastname FROM tblpeople WHERE id = ' . $personid);
+      $arrayPeople = pg_fetch_assoc($recPeople);
+      if ($arrayPeople){
+        $fullname = " " . $arrayPeople['fldfirstname'] . " ". $arrayPeople["fldlastname"] . " |";  
+      }else{
+        $fullname = " no data |";
+      }
+      return $fullname;
+    }
+
+
+      $sitenum = 1068;
       if($sitenum==NULL){
         echo "That is not a valid site request.";
       }else{
@@ -75,41 +90,43 @@ if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
         $arrayJobs = pg_fetch_all($recJobs);
         $key = "id";
         echo "<br>";
+        echo $arrayJobs;
         // verify there are jobs for site
         if ($recJobs) {
           //print header - use this later I figure out joins
-          //echo "Job Number | Job Name | Warranty Start |Warranty End | Sales Person |  
-          // Project Manager | Programmer | Lead Installer |<br>";
-          //print header 
-          echo "Job Number | Job Name <br>";
+          echo "Job Number | Job Name | Warranty Start |Warranty End | Sales Person |  
+           Project Manager | Programmer | Lead Installer |<br>";
           //check if it has any job information
           foreach ($arrayJobs as $key => $job) {
-            // need to figure out how to display the rest of the data with JOINs or other means
-            //$salesmanid = $job["fldsalesman"];
-            //$recPeople = pg_query($db, 'SELECT fldfirstname, fldlastname FROM tblepeople WHERE = ' . $job["fldsalesman"]);
-            //$arrayPeople = pg_fetch_all($recPeople);
-            //$salesman = $arrayPeople['fldfirstname'] . " ". $arrayPeople["fldlastname"];
-            /*$salesmanid = $job["fldsalesman"];
-            $salesman = $job["first"];
-            //echo Getname($job["fldsalesman"] . ", " . $salesman . "<br/>";
-            echo $job["fldsalesman"] . ", " . $salesmanid . "<br/>";
-            //$salesman = "";
-            $projectmanager = "";
-            $engineer = "";
-            $leadinstaller = "";*/
-            echo $job["fldjobnumber"] . ' | ' . 
-            $job["fldjobname"] . ' | ' .
-            
-            /*
-            Need revise this section to display additional job info
-            $job["fldwarrstart"] . ' | ' .
-            $job["fldwarrend"] . ' | ' .
-            $salesman . ', '. $job["fldsalesman"]. ' | ' .
-            //$job["fldsalesman"] . ' | ' .
-            $job["fldprojectmanager"] . ' | ' .
-            $job["fldengineer"] . ' | ' .
-            $job["fldleadinstaller"] */
-             "<br/>";
+            $salesman = Getname ($job["fldsalesman"], $db);
+            $projectmanager = Getname ($job["fldprojectmanager"], $db);
+            $engineer = Getname ($job["fldengineer"], $db);
+            $leadinstaller = Getname ($job["fldleadinstaller"], $db);
+            echo $job["fldjobname"];
+
+            if ($job["fldjobname"]!= ""){
+              echo $job["fldjobname"] . ' | ';  
+            }else{
+              echo " no data |";
+            }
+
+            if ($job["fldwarrstart"]!= ""){
+              echo $job["fldwarrstart"] . ' | ';  
+            }else{
+              echo " no data |";
+            }
+
+            if ($job["fldwarrend"]!= ""){
+              echo $job["fldwarrend"] . ' | ';  
+            }else{
+              echo " no data |";
+            }
+
+            echo $salesman;
+            echo $projectmanager;
+            echo $engineer;
+            echo $leadinstaller;
+            echo "<br/>";
         }
           // if job information exists, print it for each job on site
           unset($recJobs);
@@ -121,13 +138,6 @@ if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
       }
     pg_close($db);
 
-//use function instead of JOIN to get names?
-    function Getname ($personid) {
-      $recPeople = pg_query($db, 'SELECT fldfirstname, fldlastname FROM tblpeople WHERE = ' . $personid);
-      $arrayPeople = pg_fetch_all($recPeople);
-      echo $job["fldsalesman"] . ", " . $personid . ", " . $arrayPeople . "<br/>";
-      return $fullname = $arrayPeople['fldfirstname'] . " ". $arrayPeople["fldlastname"];
-    }
 
     ?>
   </body>

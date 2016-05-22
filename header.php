@@ -29,9 +29,9 @@
                         
                         <?php
                             if ($_SESSION['loggedin'] === 1){
+                                //echo "Logout";
                                 echo '<li><form class="logout" action="auth_register.php" method="POST"
                                 <p><input type="submit" name="submit" value="Logout"></p></li>';
-                                //echo "Logout";
                             }else{
                                 //echo"Login";
                                 echo '<li><a href="auth_register_form.php">Login or Register</a></li>';

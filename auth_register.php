@@ -1,8 +1,25 @@
 <?php 
+    /*
+    *   Login and Registration
+    *   Gretchen Miller
+    *   5/20/2016
+    *
+    *   File name: auth_register.php
+    *   Files that depend on auth_register.php:
+    *       Provides the code for auth_register_form.php
+    *       header.php - logout button
+    *   Files that this file depends on:
+    *       config.php  - connects to database
+    *       auth_register_form.php
+    *       index.php
+    *
+    *   Future
+    *   - create function that all pages can reference to automatically log
+            user out of session is too old.
+    */
+
 	session_start();
 	include 'config.php';
-
-    $_SESSION['loggedin'] = 0;
 
 	$username=$_POST['username'];
 	$password=$_POST['password'];
@@ -10,45 +27,47 @@
 	$email = $_POST['email'];
     $action = $_POST['submit'];
 
-    // Do passwords match?
+    /**********************************
+    *   Login
+    **********************************/
     if ($action == "Login") {
-        //$query = pg_exec($db,"SELECT fldusername,fldpassword FROM tblUsers WHERE fldusername = '$username'") or die(pg_last_error());
+        // get stored password hash
         $query = pg_exec($db,"SELECT * FROM tblUsers WHERE fldusername = '$username'") or die(pg_last_error());
         $data = pg_fetch_array($query);
-        //check username and password
+        // check username and password
         if (password_verify ($password, $data['fldpassword'])) {
-            //setcookie("user", "$username", time()+3600);
+            // set session variables and return to home page with message
             $_SESSION['loggedin'] = 1;
             $_SESSION['logintime'] = idate("U");
             $_SESSION['active'] = $data['fldactive'];
-            /*echo $data['fldusername'];
-            echo $data['fldpassword'];
-            echo $data['fldcreated'];
-            echo $data['fldlastlogin'];
-            if ($data['fldactive'] == "t"){
-                echo "true </br>";
-            }else{
-                echo "false </br>";
-            }
-            echo $data['fldactive'];
-            echo $data['fldemail'];*/
+            //$tPhptime = date('Y-m-d H:i:s');
+            $qry = "UPDATE tblUsers SET fldlastlogin = now() WHERE fldusername = '$username'";
+            $pgqry = pg_query($db, $qry);
             if ($data['fldactive'] == "f"){
-                $_SESSION['message1'] = "Account: "  . $data['fldusername'] . " - Your account is not active. Contact the database administrator to confirm your registration.";
+                $_SESSION['message1'] = "Account: "  . $data['fldusername'] . " - Your account is not active. 
+                    Contact the database administrator to confirm your registration.";
             }else{
                 $_SESSION['message1'] = $data['fldusername'] . " is logged in.";
             }
             header("Location: index.php");
+
         }else{
-            $_SESSION['message1'] = "Incorrect username or password.";
+            // message if login fails and return to authentication and login page
+            $_SESSION['message1 = ""'];
+            $_SESSION['message3'] = "Incorrect username or password.";
             header("Location: auth_register_form.php");
         }
+
+    /**********************************
+    *   Register
+    **********************************/
     }else if ($action == "Register"){
+        // Do passwords match?
 		if ($password != $password2){
             $_SESSION['message2'] = "Passwords do not match. Please try again.";
 			header("Location: auth_register_form.php");
         }else{
         	//Has the username or email been used?
-            //$checkuser = pg_exec($db, "SELECT fldusername FROM tblUsers WHERE fldusername='$username'");
             $checkuser = pg_exec($db, "SELECT fldusername FROM tblUsers WHERE fldusername='$username'");
             $username_exist = pg_num_rows($checkuser);
             $checkemail = pg_exec("SELECT fldEmail FROM tblUsers WHERE fldEmail='$email'");
@@ -64,14 +83,19 @@
                 header("Location: auth_register_form.php");
                 $_SESSION['message2'] = "Contact the database administrator to confirm your registration.";
             }
-        }        
+        } 
+
+    /**********************************
+    *   Logout
+    **********************************/       
     }else if ($action =="Logout"){
-        $_SESSION['loggedin'] = 0;
-        $_SESSION['message1'] = NULL;
-        $_SESSION['message2'] = NULL;
-        $_SESSION['logintime'] = NULL;
-        //unset($_COOKIE["user"]);
+        session_unset();
+        session_destroy();
         header("Location: auth_register_form.php");
+
+    /**********************************
+    *   All else
+    **********************************/
     }else{
         $_SESSION['message1'] = "So confused! What did you want to do?";
         $_SESSION['message2'] = NULL;

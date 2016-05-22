@@ -45,6 +45,9 @@
                     if ($_SESSION['message1'] != NULL){
                         echo $_SESSION['message1'];
                     }
+                    if ($_SESSION['message3'] != NULL){
+                        echo $_SESSION['message3'];
+                    }
                 ?>
                 </h2>
             </form>
@@ -77,8 +80,6 @@
                 ?>
                 </h2>
             </form>
-        <!--
-        </section> 
-    -->
+        </section>
     </body>
 </html>
