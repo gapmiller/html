@@ -21,18 +21,21 @@ if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
 	    include 'config.php';
 	    echo "Old Site Names";
       echo "<br>";
+      echo " Old Name - New Name";
         // query for old name info
         $recOldNames = pg_query($db, 'SELECT * FROM tbloldnames *ORDER BY fldoldname ASC');
         $arrayOldNames = pg_fetch_all($recOldNames);
         $key = "id";
         //echo $arrayOldNames[0][id];
         foreach ($arrayOldNames as $key => $oldname) {
-        	echo nl2br($oldname["fldoldname"] . "\n");
+        	//echo nl2br($oldname["fldoldname"] . "\n");
+          $sitenum = $oldname["fldcurrentname"];
 	        $recSites = pg_query($db, 'SELECT fldsitename FROM tblsites WHERE id =' . $sitenum);
 	        $arraySites = pg_fetch_assoc($recSites);
-	        //echo'<a href= "jobnumbers.php?num=' . $site["id"].'">'. $site["fldsitename"] . '</a>';
-        	//echo nl2br($oldname["fldoldname"] . " -> " . '<a href= "jobnumbers.php?num=' . $oldname["fldcurrentname"].'">'. $oldname["fldcurrentname"] . 
-          //  '</a>'$oldname["fldcurrentname"] . "\n");
+	        //echo'<a href= "jobnumbers.php?num=' . $arraySites["id"].'">'. $arraySites["fldsitename"] . '</a>';
+          //echo $arraySites;
+        	echo nl2br($oldname["fldoldname"] . " - " .  
+            '<a href= "jobnumbers.php?num=' . $sitenum .'">'. $arraySites["fldsitename"] . '</a>' . "\n");
         }
     ?>
   </body>

@@ -102,7 +102,7 @@ if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
             $projectmanager = Getname ($job["fldprojectmanager"], $db);
             $engineer = Getname ($job["fldengineer"], $db);
             $leadinstaller = Getname ($job["fldleadinstaller"], $db);
-            echo $job["fldjobname"];
+            echo $job["fldjobnumber"] . ' | ';
 
             if ($job["fldjobname"]!= ""){
               echo $job["fldjobname"] . ' | ';  
