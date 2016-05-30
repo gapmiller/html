@@ -74,7 +74,7 @@
             $email_exist = pg_num_rows($checkemail);
             if ($email_exist||$username_exist) {
                 $_SESSION['message2'] = "Username or email exists.";
-                header("Location: auth_register_form.php");
+                header("Location: auth_register_form.php?authreg=register");
             }else{
                 //Everything seems good, lets insert.
                 $hpassword = password_hash($password, PASSWORD_DEFAULT);

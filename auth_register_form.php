@@ -75,6 +75,8 @@
 
                     echo '</form>';
 
+                    $_SESSION['message3'] = "";
+
                 }else{
                     echo '<form class="auth-form" action="auth_register.php" method="POST">
                         <h1>Login</h1>
@@ -89,10 +91,14 @@
                             <input type="submit" name="submit" value="Login">
                         </p>
                         <h2>';
+
+
+                    $_SESSION['message2'] = "";
                         
                     if ($_SESSION['message1'] != NULL){
                         echo $_SESSION['message1'];
                     }
+
                     if ($_SESSION['message3'] != NULL){
                         echo $_SESSION['message3'];
                     }

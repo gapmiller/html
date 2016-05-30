@@ -13,6 +13,8 @@
                         echo "Something went wrong. Try logging in again.";
                       }
                     echo '</p>';
+                    $_SESSION['message2'] = "";
+                    $_SESSION['message3'] = "";
                 ?>
             </section>
         </div>
