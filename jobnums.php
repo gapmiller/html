@@ -4,43 +4,39 @@ session_start();
 if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
   header("Location: index.php");
 }
-
 ?>
-<!DOCTYPE html>
-<html>
+
 <?php include('header.php'); ?>
-  <head>
-    <title>Climatec Controls-Job Numbers</title>
-  </head>
-  <body>
-    <h3>Job Numbers</h3>
-<?php
-  include 'config.php';
 
-  $recJobs = pg_query($db, 'SELECT * FROM tbljobnumbers ORDER BY fldjobnumber ASC');
-  $arrayJobnums = pg_fetch_all($recJobs);
-  $counter = 1;
-  $key = "id";
-    if ($recJobs) {
-      foreach ($arrayJobnums as $key => $jobnum) {
-        print_r($counter);
-        echo ", ";
-        print_r($jobnum["fldjobnumber"]);
-        echo ", ";
+<!--content for page -->
+  <div class="container">
+    <section>
+        <?php 
+           
+          include 'config.php';
+          echo "<p class='title'>Job Number List</p>";
+          echo "<table id='jobs'>";
+          echo "<tr><th>Job Number</th> <th>Job Name </th></tr>";
 
-        print_r($jobnum["fldjobname"]);  
-        echo "<br/>";
-        $counter++;
-      }
-        unset($jobnum);
-    } else {
-        echo "There is a problem retrieving the site information.\n";
-    }
+          $recJobs = pg_query($db, 'SELECT * FROM tbljobnumbers ORDER BY fldjobnumber ASC');
+          $arrayJobnums = pg_fetch_all($recJobs);
+          $key = "id";
+            if ($recJobs) {
+              foreach ($arrayJobnums as $key => $jobnum) {
+                echo "<tr>";
+                echo "<td>". $jobnum["fldjobnumber"] . "</td>";
+                echo "<td>". $jobnum["fldjobname"] . "</td>";
+                echo "</tr>";
+              }
+                unset($jobnum);
+            } else {
+                echo nl2br ("There is a problem retrieving the job information.\n");
+            }
 
-  pg_close($db);
+          pg_close($db);
 
-?>
-
+        ?>
+      </section>
+    </div>
   </body>
-
 </html>

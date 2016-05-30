@@ -2,37 +2,34 @@
 // gotta have a session to see anything
 session_start();
 if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
-	header("Location: index.php");
-	if ($_SESSION['message1'] != NULL){
-	    echo $_SESSION['message1'];
-	}
+  header("Location: index.php");
+  if ($_SESSION['message1'] != NULL){
+      echo $_SESSION['message1'];
+  }
   exit; 
 }
 ?>
-<!DOCTYPE html>
-<html>
+
 <?php include('header.php'); ?>
 
-  <head>
-    <title>Climatec Controls-Job Numbers</title>
-  </head>
-
-  <body>
+    <div class="container">
+      <section>
     <?php
-
+    echo "<div class='siteinfo'>";
 //should use JOIN to get names?
     function Getname ($personid, $db) {
       //include 'config.php'; 
       $recPeople = pg_query($db, 'SELECT fldfirstname, fldlastname FROM tblpeople WHERE id = ' . $personid);
       $arrayPeople = pg_fetch_assoc($recPeople);
       if ($arrayPeople){
-        $fullname = " " . $arrayPeople['fldfirstname'] . " ". $arrayPeople["fldlastname"] . " |";  
+        $fullname = " " . $arrayPeople['fldfirstname'] . " ". $arrayPeople["fldlastname"];  
       }else{
-        $fullname = " no data |";
+        $fullname = " no data";
       }
       return $fullname;
     }
 
+// beginning of content
       $sitenum = filter_input(INPUT_GET, 'num', FILTER_VALIDATE_INT);
       
       if($sitenum==NULL){
@@ -40,11 +37,14 @@ if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
       }else{
         //connect to database
         include 'config.php';
+
+        echo "<p>";
         // query for site info
         $recSites = pg_query($db, 'SELECT * FROM tblsites WHERE id =' . $sitenum);
         $arraySites = pg_fetch_assoc($recSites);
-        echo nl2br($arraySites["fldsitename"] . "\n");
-        
+        echo nl2br('<p class="title">'. $arraySites["fldsitename"] . '</p>' . "\n");
+
+        echo "<p>";
         if (!is_null($arraySites["fldsiteaddress1"])){
           echo nl2br($arraySites["fldsiteaddress1"] . "\n");
         }
@@ -83,50 +83,54 @@ if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
             }
           }
         }
-          echo "<br/>";
+        echo "</p>";
+        echo "</div>";
+
+        //table column headers
+        echo "<table id='jobs'>";
+        echo "<tr><th>Job Number</th> <th>Job Name </th><th>Warranty Start </th><th>Warranty End </th>
+            <th>Sales Person </th><th>Project Manager </th><th>Programmer </th><th>Lead Installer </th></tr>";
+
         // query for site jobs
         $qry = "SELECT * FROM tbljobnumbers WHERE fldsiteid = " . $sitenum . ' ORDER BY fldjobnumber ASC';
         $recJobs = pg_query($db, $qry);
         $arrayJobs = pg_fetch_all($recJobs);
         $key = "id";
-        echo "<br>";
-        echo $arrayJobs;
+
         // verify there are jobs for site
         if ($recJobs) {
-          //print header - use this later I figure out joins
-          echo "Job Number | Job Name | Warranty Start |Warranty End | Sales Person |  
-           Project Manager | Programmer | Lead Installer |<br>";
           //check if it has any job information
           foreach ($arrayJobs as $key => $job) {
+            echo "<tr>";
             $salesman = Getname ($job["fldsalesman"], $db);
             $projectmanager = Getname ($job["fldprojectmanager"], $db);
             $engineer = Getname ($job["fldengineer"], $db);
             $leadinstaller = Getname ($job["fldleadinstaller"], $db);
-            echo $job["fldjobnumber"] . ' | ';
+            echo "<td>" . $job["fldjobnumber"] . "</td>";
 
             if ($job["fldjobname"]!= ""){
-              echo $job["fldjobname"] . ' | ';  
+              echo "<td>" . $job["fldjobname"] .  "</td>";  
             }else{
-              echo " no data |";
+              echo "<td>" . "no data" . "</td>";
             }
 
             if ($job["fldwarrstart"]!= ""){
-              echo $job["fldwarrstart"] . ' | ';  
+              echo "<td>" . $job["fldwarrstart"] . "</td>";  
             }else{
-              echo " no data |";
+              echo "<td>" . "no data" . "</td>";
             }
 
             if ($job["fldwarrend"]!= ""){
-              echo $job["fldwarrend"] . ' | ';  
+              echo "<td>" . $job["fldwarrend"] . "</td>";  
             }else{
-              echo " no data |";
+              echo "<td>" . "no data" . "</td>";
             }
 
-            echo $salesman;
-            echo $projectmanager;
-            echo $engineer;
-            echo $leadinstaller;
-            echo "<br/>";
+            echo "<td>" . $salesman . "</td>";
+            echo "<td>" . $projectmanager . "</td>";
+            echo "<td>" . $engineer . "</td>";
+            echo "<td>" . $leadinstaller . "</td>";
+            echo "</tr>";
         }
           // if job information exists, print it for each job on site
           unset($recJobs);
@@ -136,7 +140,11 @@ if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
           echo "No job information found for this site.";
         }
       }
+      
+      echo "</table>";
     pg_close($db);
-    ?>
+        ?>
+      </section>
+    </div>
   </body>
 </html>

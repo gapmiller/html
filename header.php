@@ -15,16 +15,16 @@
                     <h1 id="brand"></h1>
                     <ul>
                         <li>
-                            <a href="jobsitenum.php">Job numbers listed by site</a>
+                            <a href="jobsitenum.php">Site List</a>
                         </li>
                         <li>
-                            <a href="jobsites.php">Sites</a>
+                            <a href="jobsites.php">Site Information</a>
                         </li>
                         <li>
-                            <a href="jobnums.php">Job numbers</a>
+                            <a href="jobnums.php">Job Number List</a>
                         </li>
                         <li>
-                            <a href="oldnames.php">Sites listed by previous names</a>
+                            <a href="oldnames.php">Alternate and Previous Site Names</a>
                         </li>
                         
                         <?php
@@ -45,5 +45,3 @@
 
         <section id="hero">
         </section> 
-    </body>
-</html>

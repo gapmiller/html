@@ -29,6 +29,10 @@ nav li a {
 	padding: 25px 10px;
 	display: block;
 	color: #666666;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1em;
+
 }
 
 #brand {
@@ -218,3 +222,54 @@ nav li a {
 }
 
 .clear{clear: both;}
+
+.bodycontainer,
+.container{
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.bodycontainer a {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+.container a {
+    
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.2em;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px 0px;
+}
+
+#oldnames th,
+#jobs th {
+    font-weight: bold;
+    text-align: left;
+}
+
+#general,
+#oldnames,
+#jobs {
+    margin: 20px 0px;
+}
+
+#oldnames td,
+#oldnames th,
+#jobs td,
+#jobs th {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 16px;
+}
