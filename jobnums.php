@@ -38,5 +38,5 @@ if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
         ?>
       </section>
     </div>
-  </body>
-</html>
+    
+  <?php include('footer.php'); ?>

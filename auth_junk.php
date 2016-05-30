@@ -17,25 +17,6 @@
             <nav>
                 <div class="container">
                     <a href="index.php" id="brand">job number and site list</a>
-                    <ul class="authlist">
-                        <?php
-                            if ($_SESSION['loggedin'] === 1){
-                                echo '<li><form action="auth_register.php" method="POST">
-                                    <p><button type="submit" class="navbutton" name="submit" value="Logout">
-                                    <span>Logout</span></button></p></form></li>';
-
-                            }else{
-                                //echo"Login";
-                                echo '<li><form action="auth_register_form.php" method="GET">
-                                    <p><button type="submit" class="navbutton" name="authreg" value="login">
-                                    <span>Login</span></button></p></form></li>';
-                                echo '<li><p>or<p></li>';
-                                echo '<li><form action="auth_register_form.php" method="GET">
-                                    <p><button type="submit" class="navbutton" name="authreg" value="register">
-                                    <span>Register</span></button></p></form></li>';
-                            }
-                        ?>
-                    </ul>
                 </div>
             </nav>
         </header>
@@ -43,8 +24,6 @@
         <section id="hero">
             <div class='container'>
                 <?php
-
-                        $authreg=$_GET['authreg'];
                 if ($authreg === 'register'){
                     echo '<form class="reg-form" action="auth_register.php" method="POST">
                         <h1>Register</h1>
@@ -68,12 +47,12 @@
                             <input type="submit" name="submit" value="Register">
                         </p>
                         <h2>';
+                        echo '<a href="auth_junk.php">Login</a>';
+                        
                             if ($_SESSION['message2'] != NULL){
                                 echo $_SESSION['message2'];
                             }    
                         echo '</h2>';
-
-                    echo '</form>';
 
                 }else{
                     echo '<form class="auth-form" action="auth_register.php" method="POST">
@@ -89,6 +68,7 @@
                             <input type="submit" name="submit" value="Login">
                         </p>
                         <h2>';
+                    echo '<a href="auth_junk.php">Register</a>';
                         
                     if ($_SESSION['message1'] != NULL){
                         echo $_SESSION['message1'];
@@ -100,6 +80,7 @@
                     echo '</form>';
                 }
                     ?>
+                </form>
             </div>
         </section>
         <div class="container">

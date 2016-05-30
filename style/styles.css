@@ -16,7 +16,7 @@ nav {
 }
 
 nav ul {
-    float: right;
+    float: center;
     width: auto;
 }   
 
@@ -26,13 +26,53 @@ nav li {
 }
 
 nav li a {
-	padding: 25px 10px;
-	display: block;
-	color: #666666;
+    padding: 25px 10px;
+    display: block;
+    color: #666666;
     font-size: 16px;
     font-weight: normal;
     line-height: 1em;
 
+}
+
+nav li p {
+    padding: 25px 10px;
+    display: block;
+    color: #666666;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1em;
+
+}
+
+.authlist {
+    float: right;
+     padding: 0px 0px 0px;    
+}
+
+/** class .logout can be deleted if the logout button in header.php will line up correctly using the navbutton class ? **/
+.logout {
+     background: none!important;
+     border: none; 
+     padding: 22px 0px 0px;
+     font: inherit;
+     font-weight: normal;
+     /*border is optional*/
+     border-bottom: 1px solid #666666; 
+     cursor: pointer;
+     float: right;
+}
+
+.navbutton {
+     background: none!important;
+     border: none; 
+     padding: 0px 0px 0px;
+     font: inherit;
+     font-weight: normal;
+     /*border is optional*/
+     border-bottom: 1px solid #666666; 
+     cursor: pointer;
+     float: right;
 }
 
 #brand {
@@ -55,6 +95,10 @@ nav li a {
     font-family: 'Raleway', 'Lato', Arial, sans-serif;
     color: white;
     text-shadow: 0 2px 1px rgba(0,0,0,0.3);
+}
+
+.auth-form {
+    float: center;
 }
 
 .auth-form {
@@ -217,12 +261,9 @@ nav li a {
     display: block;
 }
 
-.message{
-
-}
-
 .clear{clear: both;}
 
+footer,
 .bodycontainer,
 .container{
     width: 1600px;

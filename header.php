@@ -12,32 +12,38 @@
         <header id="masthead">
             <nav>
                 <div class="container">
-                    <h1 id="brand"></h1>
+                    <a href="index.php" id="brand">job number and site list</a>
                     <ul>
-                        <li>
-                            <a href="jobsitenum.php">Site List</a>
-                        </li>
-                        <li>
-                            <a href="jobsites.php">Site Information</a>
-                        </li>
-                        <li>
-                            <a href="jobnums.php">Job Number List</a>
-                        </li>
-                        <li>
-                            <a href="oldnames.php">Alternate and Previous Site Names</a>
-                        </li>
-                        
+                        <li><a href="jobsitenum.php">Site List</a></li>
+                        <li><a href="jobsites.php">Site Information</a></li>
+                        <li><a href="jobnums.php">Job Number List</a></li>
+                        <li><a href="oldnames.php">Alternate and Previous Site Names</a></li>
+                    </ul>
+                    <ul class="authlist">
                         <?php
                             if ($_SESSION['loggedin'] === 1){
                                 //echo "Logout";
-                                echo '<li><form class="logout" action="auth_register.php" method="POST"
-                                <p><input type="submit" name="submit" value="Logout"></p></li>';
+                                //echo '<li><form class="logout" action="auth_register.php" method="POST"
+                                //<p><input type="submit" name="submit" value="Logout"></p></li></form>';
+
+                                //echo '<li><form action="auth_register.php" method="POST">
+                                //    <p><button type="submit" class="logout" name="submit" value="Logout">
+                                //    <span>Logout</span></button></p></form></li>';
+                                echo '<li><form action="auth_register.php" method="POST">
+                                    <p><button type="submit" class="navbutton" name="submit" value="Logout">
+                                    <span>Logout</span></button></p></form></li>';
+
                             }else{
                                 //echo"Login";
-                                echo '<li><a href="auth_register_form.php">Login or Register</a></li>';
+                                echo '<li><form action="auth_register_form.php" method="GET">
+                                    <p><button type="submit" class="navbutton" name="authreg" value="login">
+                                    <span>Login</span></button></p></form></li>';
+                                echo '<li><p>or<p></li>';
+                                echo '<li><form action="auth_register_form.php" method="GET">
+                                    <p><button type="submit" class="navbutton" name="authreg" value="register">
+                                    <span>Register</span></button></p></form></li>';
                             }
                         ?>
-                        </div>
                     </ul>
                 </div>
             </nav>
