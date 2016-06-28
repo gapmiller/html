@@ -248,26 +248,10 @@
 	"buffers":
 	[
 		{
-			"file": "oldnames.php",
-			"settings":
-			{
-				"buffer_size": 1581,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "jobnumbers.php",
 			"settings":
 			{
-				"buffer_size": 5158,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jobnums.php",
-			"settings":
-			{
-				"buffer_size": 1173,
+				"buffer_size": 6799,
 				"line_ending": "Unix"
 			}
 		},
@@ -275,55 +259,7 @@
 			"file": "jobsites.php",
 			"settings":
 			{
-				"buffer_size": 5141,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jobsitenum.php",
-			"settings":
-			{
-				"buffer_size": 1139,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "jobnumrequest.php",
-			"settings":
-			{
-				"buffer_size": 440,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.php",
-			"settings":
-			{
-				"buffer_size": 589,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "style/styles.css",
-			"settings":
-			{
-				"buffer_size": 5305,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "header.php",
-			"settings":
-			{
-				"buffer_size": 1852,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "auth_register_form.php",
-			"settings":
-			{
-				"buffer_size": 3078,
+				"buffer_size": 5544,
 				"line_ending": "Unix"
 			}
 		}
@@ -360,21 +296,28 @@
 	},
 	"file_history":
 	[
+		"/var/www/html/index.php",
+		"/var/www/html/footer.php",
+		"/var/www/html/header.php",
+		"/var/www/html/auth_register_form.php",
+		"/var/www/html/auth_register.php",
+		"/var/www/html/style/styles.css",
+		"/var/www/html/README.md~",
+		"/var/www/html/README.md",
+		"/var/www/html/auth_register_form-old.php",
+		"/var/www/html/auth_junk.php",
+		"/var/www/html/oldnames.php",
+		"/var/www/html/jobsitenum.php",
+		"/var/www/html/jobsites.php",
+		"/var/www/html/jobnums.php",
+		"/var/www/html/jobnumbers.php",
+		"/var/www/html/jobnumrequest.php",
+		"/var/www/html/climatec-controls (copy).sublime-project",
+		"/var/www/html/climatec-controls2.sublime-workspace",
 		"/var/www/html/jobs.php",
 		"/var/www/html/jobjunk2.php",
 		"/var/www/html/jobjunk.php",
 		"/var/www/html/form.html",
-		"/var/www/html/jobsitenum.php",
-		"/var/www/html/jobnumbers.php",
-		"/var/www/html/jobnumrequest.php",
-		"/var/www/html/jobnums.php",
-		"/var/www/html/style/styles.css",
-		"/var/www/html/index.php",
-		"/var/www/html/header.php",
-		"/var/www/html/auth_register_form.php",
-		"/var/www/html/auth_register.php",
-		"/var/www/html/jobsites.php",
-		"/var/www/html/oldnames.php",
 		"/var/www/html/config.php",
 		"/var/www/html/junk.html",
 		"/var/www/html/info.php",
@@ -438,6 +381,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"button",
+			"logout",
+			"authreg",
+			";\n",
+			"logout",
 			"p>",
 			"16px",
 			">';\n",
@@ -548,51 +496,23 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "oldnames.php",
-					"settings":
-					{
-						"buffer_size": 1581,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1400,
-								1400
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "jobnumbers.php",
 					"settings":
 					{
-						"buffer_size": 5158,
+						"buffer_size": 6799,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2945,
-								2945
+								3328,
+								3328
 							]
 						],
 						"settings":
@@ -601,148 +521,8 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 752.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "jobnums.php",
-					"settings":
-					{
-						"buffer_size": 1173,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								380,
-								380
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "jobsites.php",
-					"settings":
-					{
-						"buffer_size": 5141,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								264,
-								264
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "jobsitenum.php",
-					"settings":
-					{
-						"buffer_size": 1139,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								256,
-								256
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "jobnumrequest.php",
-					"settings":
-					{
-						"buffer_size": 440,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "index.php",
-					"settings":
-					{
-						"buffer_size": 589,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								138,
-								138
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": 88.0,
+						"translation.y": 1326.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -754,85 +534,29 @@
 			"sheets":
 			[
 				{
-					"buffer": 7,
-					"file": "style/styles.css",
+					"buffer": 1,
+					"file": "jobsites.php",
 					"settings":
 					{
-						"buffer_size": 5305,
+						"buffer_size": 5544,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								421,
-								421
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "header.php",
-					"settings":
-					{
-						"buffer_size": 1852,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								753,
-								753
+								5233,
+								5233
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 289.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "auth_register_form.php",
-					"settings":
-					{
-						"buffer_size": 3078,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								58,
-								58
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1257.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -868,7 +592,7 @@
 		"cols":
 		[
 			0.0,
-			0.690559440559,
+			0.488716542038,
 			1.0
 		],
 		"rows":
@@ -907,6 +631,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 139.0,
+	"side_bar_width": 234.0,
 	"status_bar_visible": false
 }

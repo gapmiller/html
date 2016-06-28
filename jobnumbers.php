@@ -82,7 +82,53 @@ if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
               print_r($arraySites["fldsoftwarever"]);
             }
           }
+          echo "<br/>";
         }
+
+        if (!is_null($arraySites["fldnotes"])){
+          echo "Notes: ";
+          print_r($arraySites["fldnotes"]);
+          echo "<br/>";
+        }
+
+        if (!is_null($arraySites["fldownerdialin"])){
+          echo "Owner dials into site? ";
+          if($arraySites["fldownerdialin"] === "t") {
+            echo "Yes";
+          }else{
+            echo "No";
+          }
+          echo "<br/>";
+        }
+          
+        if (!is_null($arraySites["fldacctmngrid"])){
+          $qryRole = 'SELECT fldperson FROM tblfunction WHERE id = '. $arraySites["fldacctmngrid"];
+          $recPerson = pg_query($db, $qryRole);
+          $numPerson = pg_fetch_result($recPerson, 0, 0);
+          $qryName = 'SELECT fldfirstname, fldlastname FROM tblpeople WHERE id = '. intval($numPerson);
+          $recAcctMangr = pg_query($db, $qryName);
+          $arrayAcctMangr = pg_fetch_assoc($recAcctMangr);
+          echo "Account Manager: ";
+          print_r($arrayAcctMangr["fldfirstname"]);
+          echo " ";
+          print_r($arrayAcctMangr["fldlastname"]);
+          echo "<br/>";
+        }
+
+        if (!is_null($arraySites["fldremote"])){
+          echo "Remote Connection: ";
+          print_r($arraySites["fldremote"]);
+          echo "<br/>";
+        }
+
+        if (!is_null($arraySites["fldbackup"])){
+          $qry = 'SELECT fldfolder FROM tblbackup WHERE id = '. $arraySites["fldbackup"];
+          $recBackup = pg_query($db, $qry);
+          $arrayBackup = pg_fetch_assoc($recBackup);
+          echo "Location of backup: ";
+          echo nl2br($arrayBackup["fldfolder"] . "\n");
+        }
+
         echo "</p>";
         echo "</div>";
 

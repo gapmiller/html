@@ -118,8 +118,16 @@ if (($_SESSION['loggedin'] != 1) || ($_SESSION['active'] == "f")){
                   print_r($site["fldremote"]);
                   echo "<br/>";
                 }
-              	echo "<br/>";
 
+                if (!is_null($site["fldbackup"])){
+                  $qry = 'SELECT fldfolder FROM tblbackup WHERE id = '. $site["fldbackup"];
+                  $recBackup = pg_query($db, $qry);
+                  $arrayBackup = pg_fetch_assoc($recBackup);
+                  echo "Location of backup: ";
+                  echo nl2br($arrayBackup["fldfolder"] . "\n");
+                }
+
+              	echo "<br/>";
 
               }
                 unset($site);
